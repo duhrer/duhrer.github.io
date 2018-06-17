@@ -1,2 +1,1 @@
-# duhrer.github.io
-Tony's Personal Github Pages
+This is my personal GitHub pages site.

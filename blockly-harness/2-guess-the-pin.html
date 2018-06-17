@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>2: Guess the PIN</title>
+
+        <!-- Blockly dependencies -->
+        <script src="./node_modules/blockly/blockly_compressed.js"></script>
+        <script src="./node_modules/blockly/blocks_compressed.js"></script>
+        <script src="./node_modules/blockly/javascript_compressed.js"></script>
+        <script src="./node_modules/blockly/msg/js/en.js"></script>
+        <script src="./node_modules/blockly/appengine/storage.js"></script>
+
+        <!-- Harness dependencies -->
+        <script src="./node_modules/infusion/dist/infusion-all.js"></script>
+        <script src="./src/js/common/json-to-xml.js"></script>
+        <script src="./src/js/common/toolbox.js"></script>
+        <script src="./src/js/client/harness.js"></script>
+    </head>
+    <body>
+        <p><a href="index.html">Back to the index.</a></p>
+
+        <h1>2: Guess the PIN</h1>
+
+        <div id="blocklyDiv" style="height: 600px; width: 800px;"></div>
+
+        <script type="text/javascript">
+            var blockly = fluid.registerNamespace("blockly");
+            var harness = blockly.harness({
+  "blocklyOptions": {
+    "startBlocks": {
+      "id": "startBlocks",
+      "style": "display: none",
+      "blocks": [
+        {
+          "type": "variables_set",
+          "fields": [
+            {
+              "name": "VAR",
+              "": "digits"
+            }
+          ],
+          "values": [
+            {
+              "name": "VALUE",
+              "blocks": [
+                {
+                  "type": "lists_create_with",
+                  "mutations": [
+                    {
+                      "items": 10
+                    }
+                  ],
+                  "values": [
+                    {
+                      "name": "ADD0",
+                      "blocks": [
+                        {
+                          "type": "math_number",
+                          "fields": [
+                            {
+                              "name": "NUM",
+                              "": 0
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "ADD1",
+                      "blocks": [
+                        {
+                          "type": "math_number",
+                          "fields": [
+                            {
+                              "name": "NUM",
+                              "": 1
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "ADD2",
+                      "blocks": [
+                        {
+                          "type": "math_number",
+                          "fields": [
+                            {
+                              "name": "NUM",
+                              "": 2
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "ADD3",
+                      "blocks": [
+                        {
+                          "type": "math_number",
+                          "fields": [
+                            {
+                              "name": "NUM",
+                              "": 3
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "ADD4",
+                      "blocks": [
+                        {
+                          "type": "math_number",
+                          "fields": [
+                            {
+                              "name": "NUM",
+                              "": 4
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "ADD5",
+                      "blocks": [
+                        {
+                          "type": "math_number",
+                          "fields": [
+                            {
+                              "name": "NUM",
+                              "": 5
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "ADD6",
+                      "blocks": [
+                        {
+                          "type": "math_number",
+                          "fields": [
+                            {
+                              "name": "NUM",
+                              "": 6
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "ADD7",
+                      "blocks": [
+                        {
+                          "type": "math_number",
+                          "fields": [
+                            {
+                              "name": "NUM",
+                              "": 7
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "ADD8",
+                      "blocks": [
+                        {
+                          "type": "math_number",
+                          "fields": [
+                            {
+                              "name": "NUM",
+                              "": 8
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "ADD9",
+                      "blocks": [
+                        {
+                          "type": "math_number",
+                          "fields": [
+                            {
+                              "name": "NUM",
+                              "": 9
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+});
+        </script>
+
+    </body>
+</html>
