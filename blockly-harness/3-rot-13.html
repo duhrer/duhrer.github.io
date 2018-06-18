@@ -40,6 +40,8 @@
         {
           "type": "variables_set",
           "id": "start-block-1",
+          "x": 245,
+          "y": 0,
           "fields": [
             {
               "name": "VAR",
@@ -417,6 +419,64 @@
                             {
                               "name": "TEXT",
                               "": "z"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "procedures_defreturn",
+          "x": 0,
+          "y": 0,
+          "fields": [
+            {
+              "name": "NAME",
+              "": "rot13"
+            }
+          ],
+          "values": [
+            {
+              "name": "RETURN",
+              "blocks": [
+                {
+                  "type": "variables_get",
+                  "fields": [
+                    {
+                      "name": "VAR",
+                      "": "rot13"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "statements": [
+            {
+              "name": "STACK",
+              "blocks": [
+                {
+                  "type": "variables_set",
+                  "fields": [
+                    {
+                      "name": "VAR",
+                      "": "rot13"
+                    }
+                  ],
+                  "values": [
+                    {
+                      "name": "VALUE",
+                      "blocks": [
+                        {
+                          "type": "text",
+                          "fields": [
+                            {
+                              "name": "TEXT"
                             }
                           ]
                         }

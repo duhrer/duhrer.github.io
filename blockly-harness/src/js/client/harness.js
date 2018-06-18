@@ -35,8 +35,17 @@
         Blockly.JavaScript.INFINITE_LOOP_TRAP = 'if (--window.LoopTrap == 0) throw "Infinite loop.";\n';
         var code = Blockly.JavaScript.workspaceToCode(that.workspace);
         Blockly.JavaScript.INFINITE_LOOP_TRAP = null;
+        if (that.options.returnValues) {
+            code += "var returnValue = {";
+            var variableDefs = fluid.transform(that.options.returnValues, function (fieldName) {
+                code += fieldName + ":" + fieldName
+            });
+            code += variableDefs;
+            code += "};\nreturnValue;\n";
+        }
+
         try {
-            eval(code);
+            var returnValue = eval(code)
         } catch (e) {
             alert(e);
         }
