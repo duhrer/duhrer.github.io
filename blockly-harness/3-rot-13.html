@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>3: ROT 13</title>
+
+        <!-- Blockly dependencies -->
+        <script src="./node_modules/blockly/blockly_compressed.js"></script>
+        <script src="./node_modules/blockly/blocks_compressed.js"></script>
+        <script src="./node_modules/blockly/javascript_compressed.js"></script>
+        <script src="./node_modules/blockly/msg/js/en.js"></script>
+        <script src="./node_modules/blockly/appengine/storage.js"></script>
+
+        <!-- Harness dependencies -->
+        <script src="./node_modules/infusion/dist/infusion-all.js"></script>
+        <script src="./src/js/common/json-to-xml.js"></script>
+        <script src="./src/js/common/toolbox.js"></script>
+        <script src="./src/js/client/harness.js"></script>
+    </head>
+    <body>
+        <p><a href="index.html">Back to the index.</a></p>
+
+        <h1>3: ROT 13</h1>
+        <p>Create a program that will prompt the user for text, and then display it with all the characters &#x27;rotated&#x27;  by 13 characters.  For example, in ROT13, &#x27;hello&#x27; becomes &#x27;uryyb&#x27;.</p>
+
+        <button id="run-code">Run Your Code</button>
+
+        <hr/>
+
+        <div id="blocklyDiv" style="height: 600px; width: 800px;"></div>
+
+        <script type="text/javascript">
+            var blockly = fluid.registerNamespace("blockly");
+            var harness = blockly.harness({
+  "blocklyOptions": {
+    "startBlocks": {
+      "id": "startBlocks",
+      "style": "display: none",
+      "blocks": [
+        {
+          "type": "variables_set",
+          "id": "start-block-1",
+          "fields": [
+            {
+              "name": "VAR",
+              "": "chars"
+            }
+          ],
+          "values": [
+            {
+              "name": "VALUE",
+              "blocks": [
+                {
+                  "type": "lists_create_with",
+                  "mutations": [
+                    {
+                      "items": 26
+                    }
+                  ],
+                  "values": [
+                    {
+                      "name": "ADD0",
+                      "blocks": [
+                        {
+                          "type": "text",
+                          "fields": [
+                            {
+                              "name": "TEXT",
+                              "": "a"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "ADD1",
+                      "blocks": [
+                        {
+                          "type": "text",
+                          "fields": [
+                            {
+                              "name": "TEXT",
+                              "": "b"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "ADD2",
+                      "blocks": [
+                        {
+                          "type": "text",
+                          "fields": [
+                            {
+                              "name": "TEXT",
+                              "": "c"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "ADD3",
+                      "blocks": [
+                        {
+                          "type": "text",
+                          "fields": [
+                            {
+                              "name": "TEXT",
+                              "": "d"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "ADD4",
+                      "blocks": [
+                        {
+                          "type": "text",
+                          "fields": [
+                            {
+                              "name": "TEXT",
+                              "": "e"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "ADD5",
+                      "blocks": [
+                        {
+                          "type": "text",
+                          "fields": [
+                            {
+                              "name": "TEXT",
+                              "": "f"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "ADD6",
+                      "blocks": [
+                        {
+                          "type": "text",
+                          "fields": [
+                            {
+                              "name": "TEXT",
+                              "": "g"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "ADD7",
+                      "blocks": [
+                        {
+                          "type": "text",
+                          "fields": [
+                            {
+                              "name": "TEXT",
+                              "": "h"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "ADD8",
+                      "blocks": [
+                        {
+                          "type": "text",
+                          "fields": [
+                            {
+                              "name": "TEXT",
+                              "": "i"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "ADD9",
+                      "blocks": [
+                        {
+                          "type": "text",
+                          "fields": [
+                            {
+                              "name": "TEXT",
+                              "": "j"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "ADD10",
+                      "blocks": [
+                        {
+                          "type": "text",
+                          "fields": [
+                            {
+                              "name": "TEXT",
+                              "": "k"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "ADD11",
+                      "blocks": [
+                        {
+                          "type": "text",
+                          "fields": [
+                            {
+                              "name": "TEXT",
+                              "": "l"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "ADD12",
+                      "blocks": [
+                        {
+                          "type": "text",
+                          "fields": [
+                            {
+                              "name": "TEXT",
+                              "": "m"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "ADD13",
+                      "blocks": [
+                        {
+                          "type": "text",
+                          "fields": [
+                            {
+                              "name": "TEXT",
+                              "": "n"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "ADD14",
+                      "blocks": [
+                        {
+                          "type": "text",
+                          "fields": [
+                            {
+                              "name": "TEXT",
+                              "": "o"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "ADD15",
+                      "blocks": [
+                        {
+                          "type": "text",
+                          "fields": [
+                            {
+                              "name": "TEXT",
+                              "": "p"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "ADD16",
+                      "blocks": [
+                        {
+                          "type": "text",
+                          "fields": [
+                            {
+                              "name": "TEXT",
+                              "": "q"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "ADD17",
+                      "blocks": [
+                        {
+                          "type": "text",
+                          "fields": [
+                            {
+                              "name": "TEXT",
+                              "": "r"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "ADD18",
+                      "blocks": [
+                        {
+                          "type": "text",
+                          "fields": [
+                            {
+                              "name": "TEXT",
+                              "": "s"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "ADD19",
+                      "blocks": [
+                        {
+                          "type": "text",
+                          "fields": [
+                            {
+                              "name": "TEXT",
+                              "": "t"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "ADD20",
+                      "blocks": [
+                        {
+                          "type": "text",
+                          "fields": [
+                            {
+                              "name": "TEXT",
+                              "": "u"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "ADD21",
+                      "blocks": [
+                        {
+                          "type": "text",
+                          "fields": [
+                            {
+                              "name": "TEXT",
+                              "": "v"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "ADD22",
+                      "blocks": [
+                        {
+                          "type": "text",
+                          "fields": [
+                            {
+                              "name": "TEXT",
+                              "": "w"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "ADD23",
+                      "blocks": [
+                        {
+                          "type": "text",
+                          "fields": [
+                            {
+                              "name": "TEXT",
+                              "": "x"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "ADD24",
+                      "blocks": [
+                        {
+                          "type": "text",
+                          "fields": [
+                            {
+                              "name": "TEXT",
+                              "": "y"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "ADD25",
+                      "blocks": [
+                        {
+                          "type": "text",
+                          "fields": [
+                            {
+                              "name": "TEXT",
+                              "": "z"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+});
+        </script>
+
+    </body>
+</html>
