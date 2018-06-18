@@ -23,12 +23,29 @@
 
         // Check our progress against the exercise goals when things change.
         that.workspace.addChangeListener(that.checkProgress);
+
+        // TODO: Convert this to use a viewComponent?
+        var runButton = document.getElementById("run-code");
+        runButton.onclick = that.runCode;
     };
 
-    // TODO: Add a button to execute again?
+    blockly.harness.runCode = function (that, event) {
+        // Infinite loop trapping taken from Blockly demos.
+        window.LoopTrap = 1000;
+        Blockly.JavaScript.INFINITE_LOOP_TRAP = 'if (--window.LoopTrap == 0) throw "Infinite loop.";\n';
+        var code = Blockly.JavaScript.workspaceToCode(that.workspace);
+        Blockly.JavaScript.INFINITE_LOOP_TRAP = null;
+        try {
+            eval(code);
+        } catch (e) {
+            alert(e);
+        }
+    };
 
     blockly.harness.checkProgress = function (that, event) {
-        console.log(Blockly.Xml.workspaceToDom(that.workspace, false));
+        if (that.options.displayXmlOnChange) {
+            console.log(Blockly.Xml.workspaceToDom(that.workspace));
+        }
         /*
 
             Filter by change type?
@@ -52,6 +69,7 @@
             media: "./node_modules/blockly/media/",
             toolbox: blockly.harness.toolboxDefaults
         },
+        displayXmlOnChange: false,
         members: {
             workspace: {}
         },
@@ -64,7 +82,11 @@
         invokers: {
             checkProgress: {
                 funcName: "blockly.harness.checkProgress",
-                args:     ["{that}", "{arguments}.1"] // event
+                args:     ["{that}", "{arguments}.0"] // event
+            },
+            runCode: {
+                funcName: "blockly.harness.runCode",
+                args: ["{that}", "{arguments}.0"]
             }
         }
     })

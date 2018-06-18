@@ -33,6 +33,7 @@
             {
                 "name": "Loops",
                 "blocks": [
+                    { "type": "controls_repeat"},
                     {
                         "type": "controls_repeat_ext",
                         "values": [{
@@ -86,15 +87,9 @@
             {
                 "name": "Math",
                 "blocks": [
-                    { "type": "math_number" },
                     { "type": "math_arithmetic" },
-                    { "type": "math_single" },
-                    { "type": "math_trig" },
+                    { "type": "math_change"},
                     { "type": "math_constant" },
-                    { "type": "math_number_property" },
-                    { "type": "math_round" },
-                    { "type": "math_on_list" },
-                    { "type": "math_modulo" },
                     {
                         "type" : "math_constrain",
                         "values": [
@@ -114,6 +109,11 @@
                             }
                         ]
                     },
+                    { "type": "math_modulo" },
+                    { "type": "math_number" },
+                    { "type": "math_number_property" },
+                    { "type": "math_on_list" },
+                    { "type": "math_random_float" },
                     {
                         "type": "math_random_int",
                         "values": [
@@ -133,7 +133,9 @@
                             }
                         ]
                     },
-                    { "type": "math_random_float" }
+                    { "type": "math_round" },
+                    { "type": "math_single" },
+                    { "type": "math_trig" }
                 ]
             },
             {
@@ -155,7 +157,38 @@
                     { "type": "lists_isEmpty" },
                     { "type": "lists_indexOf" },
                     { "type": "lists_getIndex" },
-                    { "type": "lists_setIndex" }
+                    { "type": "lists_getSublist"},
+                    { "type": "lists_setIndex" },
+                    { "type": "lists_split"},
+                    { "type": "lists_sort"},
+                    { "type": "lists_repeat"}
+                ]
+            },
+            {
+                "name": "Text",
+                "blocks": [
+                    { "type": "text" },
+                    { "type": "text_append"},
+                    { "type": "text_changeCase" },
+                    { "type": "text_charAt"},
+                    { "type": "text_getSubstring" },
+                    { "type": "text_indexOf"},
+                    { "type": "text_isEmpty"},
+                    { "type": "text_join" },
+                    { "type": "text_length"},
+                    { "type": "text_print" },
+                    { "type": "text_prompt_ext"},
+                    { "type": "text_prompt"},
+                    { "type": "text_trim"}
+                ]
+            },
+            {
+                "name": "Color",
+                "blocks": [
+                    { "type": "colour_picker"},
+                    { "type": "colour_random"},
+                    { "type": "colour_rgb"},
+                    { "type": "colour_blend"}
                 ]
             },
             { "name": "Variables",  "custom": "VARIABLE" },

@@ -21,12 +21,18 @@
         <p><a href="index.html">Back to the index.</a></p>
 
         <h1>1: Sandbox</h1>
+        <p>This page is a sandbox where you can try out all the built-in Blockly functions.</p>
+
+        <button id="run-code">Run Your Code</button>
+
+        <hr/>
 
         <div id="blocklyDiv" style="height: 600px; width: 800px;"></div>
 
         <script type="text/javascript">
             var blockly = fluid.registerNamespace("blockly");
             var harness = blockly.harness({
+  "displayXmlOnChange": true,
   "blocklyOptions": {}
 });
         </script>
