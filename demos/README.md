@@ -34,7 +34,7 @@ controllers at the same time.  Requires two MIDI controllers.
 
 ### "Eye of AgaMIDI"
 
-<img src="./eye-of-agamidi/src/images/oda/agamidi_oda.svg" alt="Eye of AgaMIDI Logo" width="400"/>
+<img src="./eye-of-agamidi/src/images/agamidi-logo.svg" alt="Eye of AgaMIDI Logo" width="400"/>
 
 The ["Eye of AgaMIDI"](./eye-of-agamidi/index.html) moves a MIDI clock forward and backwards based on MIDI control
 codes.  You must connect this to an instrument that supports clock messages to use this, such as a sequencer.
