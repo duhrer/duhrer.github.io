@@ -1,0 +1,293 @@
+{
+  "version": "1.1.6",
+  "modules": [
+    {
+      "id": 1,
+      "plugin": "Core",
+      "version": "1.1.6",
+      "model": "AudioInterface",
+      "params": [],
+      "leftModuleId": 7,
+      "data": {
+        "audio": {
+          "driver": 5,
+          "deviceName": "Apple Inc.: MX279",
+          "offset": 0,
+          "maxChannels": 8,
+          "sampleRate": 44100,
+          "blockSize": 256
+        }
+      },
+      "pos": [
+        53,
+        0
+      ]
+    },
+    {
+      "id": 5,
+      "plugin": "Core",
+      "version": "1.1.6",
+      "model": "MIDIToCVInterface",
+      "params": [],
+      "rightModuleId": 11,
+      "data": {
+        "channels": 1,
+        "polyMode": 0,
+        "clockDivision": 24,
+        "lastPitch": 8520,
+        "lastMod": 127,
+        "midi": {
+          "driver": 1,
+          "deviceName": "IAC Driver Bus 1",
+          "channel": 0
+        }
+      },
+      "pos": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": 7,
+      "plugin": "Fundamental",
+      "version": "1.4.0",
+      "model": "Scope",
+      "params": [
+        {
+          "id": 0,
+          "value": 0.0
+        },
+        {
+          "id": 1,
+          "value": -1.26000464
+        },
+        {
+          "id": 2,
+          "value": 0.0
+        },
+        {
+          "id": 3,
+          "value": 0.0
+        },
+        {
+          "id": 4,
+          "value": 14.0
+        },
+        {
+          "id": 5,
+          "value": 0.0
+        },
+        {
+          "id": 6,
+          "value": 0.0
+        },
+        {
+          "id": 7,
+          "value": 0.0
+        }
+      ],
+      "leftModuleId": 14,
+      "rightModuleId": 1,
+      "data": {
+        "lissajous": 0,
+        "external": 0
+      },
+      "pos": [
+        40,
+        0
+      ]
+    },
+    {
+      "id": 10,
+      "plugin": "Core",
+      "version": "1.1.6",
+      "model": "MIDIToCVInterface",
+      "params": [],
+      "data": {
+        "channels": 1,
+        "polyMode": 0,
+        "clockDivision": 24,
+        "lastPitch": 6518,
+        "lastMod": 127,
+        "midi": {
+          "driver": 1,
+          "deviceName": "IAC Driver Bus 1",
+          "channel": 1
+        }
+      },
+      "pos": [
+        0,
+        1
+      ]
+    },
+    {
+      "id": 11,
+      "plugin": "AudibleInstruments",
+      "version": "1.0.0",
+      "model": "Tides",
+      "params": [
+        {
+          "id": 0,
+          "value": 0.0
+        },
+        {
+          "id": 1,
+          "value": 0.0
+        },
+        {
+          "id": 2,
+          "value": 28.4160061
+        },
+        {
+          "id": 3,
+          "value": -12.0
+        },
+        {
+          "id": 4,
+          "value": -0.980000198
+        },
+        {
+          "id": 5,
+          "value": -0.226000309
+        },
+        {
+          "id": 6,
+          "value": 0.0949999541
+        }
+      ],
+      "leftModuleId": 5,
+      "rightModuleId": 13,
+      "data": {
+        "mode": 1,
+        "range": 1,
+        "sheep": false
+      },
+      "pos": [
+        8,
+        0
+      ]
+    },
+    {
+      "id": 13,
+      "plugin": "Fundamental",
+      "version": "1.4.0",
+      "model": "VCMixer",
+      "params": [
+        {
+          "id": 0,
+          "value": 2.0
+        },
+        {
+          "id": 1,
+          "value": 1.41421354
+        },
+        {
+          "id": 2,
+          "value": 1.0
+        },
+        {
+          "id": 3,
+          "value": 1.0
+        },
+        {
+          "id": 4,
+          "value": 1.0
+        }
+      ],
+      "leftModuleId": 11,
+      "rightModuleId": 14,
+      "pos": [
+        22,
+        0
+      ]
+    },
+    {
+      "id": 14,
+      "plugin": "Fundamental",
+      "version": "1.4.0",
+      "model": "Delay",
+      "params": [
+        {
+          "id": 0,
+          "value": 0.154500097
+        },
+        {
+          "id": 1,
+          "value": 0.364499986
+        },
+        {
+          "id": 2,
+          "value": 0.296999991
+        },
+        {
+          "id": 3,
+          "value": 0.917000175
+        }
+      ],
+      "leftModuleId": 13,
+      "rightModuleId": 7,
+      "pos": [
+        32,
+        0
+      ]
+    }
+  ],
+  "cables": [
+    {
+      "id": 5,
+      "outputModuleId": 5,
+      "outputId": 4,
+      "inputModuleId": 11,
+      "inputId": 5,
+      "color": "#c9b70e"
+    },
+    {
+      "id": 22,
+      "outputModuleId": 13,
+      "outputId": 0,
+      "inputModuleId": 7,
+      "inputId": 0,
+      "color": "#c91847"
+    },
+    {
+      "id": 21,
+      "outputModuleId": 10,
+      "outputId": 4,
+      "inputModuleId": 13,
+      "inputId": 0,
+      "color": "#0c8e15"
+    },
+    {
+      "id": 20,
+      "outputModuleId": 13,
+      "outputId": 0,
+      "inputModuleId": 14,
+      "inputId": 4,
+      "color": "#c9b70e"
+    },
+    {
+      "id": 23,
+      "outputModuleId": 14,
+      "outputId": 0,
+      "inputModuleId": 1,
+      "inputId": 1,
+      "color": "#0986ad"
+    },
+    {
+      "id": 19,
+      "outputModuleId": 13,
+      "outputId": 0,
+      "inputModuleId": 1,
+      "inputId": 0,
+      "color": "#0986ad"
+    },
+    {
+      "id": 17,
+      "outputModuleId": 11,
+      "outputId": 3,
+      "inputModuleId": 13,
+      "inputId": 1,
+      "color": "#0c8e15"
+    }
+  ]
+}

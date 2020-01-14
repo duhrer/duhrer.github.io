@@ -1,0 +1,78 @@
+<html>
+<head>
+    <title>Flockquencer</title>
+
+    <script src="node_modules/infusion/dist/infusion-all.js"></script>
+    <script src="node_modules/flocking/dist/flocking-all.js"></script>
+    <!-- Bergson dependencies -->
+    <script src="node_modules/bergson/dist/bergson-only.js"></script>
+
+    <script src="node_modules/flocking/src/ui/selectbox/js/selectbox.js"></script>
+    <script src="node_modules/flocking/src/ui/midi/midi-port-selector/js/midi-port-selector.js"></script>
+    <script src="node_modules/flocking/src/ui/midi/midi-connector/js/midi-connector.js"></script>
+
+    <script src="node_modules/flocking-midi-select-ng/src/js/auto-midi-system.js"></script>
+    <script src="node_modules/flocking-midi-select-ng/src/js/select-box.js"></script>
+    <script src="node_modules/flocking-midi-select-ng/src/js/auto-midi-port-selector.js"></script>
+    <script src="node_modules/flocking-midi-select-ng/src/js/auto-midi-connector.js"></script>
+
+
+    <script src="src/js/offsets.js"></script>
+    <script src="src/js/colours.js"></script>
+    <script src="src/js/mode.js"></script>
+    <script src="src/js/onscreen-svg.js"></script>
+    <script src="src/js/onscreen.js"></script>
+    <script src="src/js/performance-mode.js"></script>
+    <script src="src/js/mode-controls.js"></script>
+    <script src="src/js/connector.js"></script>
+    <script src="src/js/router.js"></script>
+    <script src="src/js/sequence.js"></script>
+    <script src="src/js/sequence-player.js"></script>
+    <script src="src/js/sequences/basic.js"></script>
+    <script src="src/js/sequences/guitar.js"></script>
+</head>
+<body>
+    <div class="flockquencer-onscreen" align="center">
+    </div>
+
+    <hr/>
+
+    <div class="flockquencer">
+        <div class="control-output"></div>
+
+
+        <hr/>
+
+        <p>Connect these to your Launchpad.</p>
+        <div class="control-input"></div>
+        <div class="ui-output"></div>
+    </div>
+
+    <script type="text/javascript">
+        var router = flockquencer.router(".flockquencer", {
+            sequenceTemplates: {
+                8:   flockquencer.sequences.every.one,
+                24:  flockquencer.sequences.every.two,
+                40:  flockquencer.sequences.every.three,
+                56:  flockquencer.sequences.every.four,
+                72:  flockquencer.sequences.guitar.major,
+                88:  flockquencer.sequences.guitar.minor,
+                104: flockquencer.sequences.guitar.major7,
+                120: flockquencer.sequences.guitar.minor7
+            },
+            model: {
+                sequences: {
+                    8:   "@expand:flockquencer.sequence.mergeWithDefaults({that}.options.sequenceTemplates.8)",
+                    24:  "@expand:flockquencer.sequence.mergeWithDefaults({that}.options.sequenceTemplates.24)",
+                    40:  "@expand:flockquencer.sequence.mergeWithDefaults({that}.options.sequenceTemplates.40)",
+                    56:  "@expand:flockquencer.sequence.mergeWithDefaults({that}.options.sequenceTemplates.56)",
+                    72:  "@expand:flockquencer.sequence.mergeWithDefaults({that}.options.sequenceTemplates.72)",
+                    88:  "@expand:flockquencer.sequence.mergeWithDefaults({that}.options.sequenceTemplates.88)",
+                    104: "@expand:flockquencer.sequence.mergeWithDefaults({that}.options.sequenceTemplates.104)",
+                    120: "@expand:flockquencer.sequence.mergeWithDefaults({that}.options.sequenceTemplates.120)"
+                }
+            }
+        });
+    </script>
+</body>
+</html>
