@@ -34,7 +34,7 @@ controllers at the same time.  Requires two MIDI controllers.
 
 ### "Eye of AgaMIDI"
 
-<img src="./eye-of-agamidi/src/images/agamidi-logo.svg" alt="Eye of AgaMIDI Logo" width="400"/>
+<img src="./eye-of-agamidi/src/images/oda/agamidi_oda.svg" alt="Eye of AgaMIDI Logo" width="400"/>
 
 The ["Eye of AgaMIDI"](./eye-of-agamidi/index.html) moves a MIDI clock forward and backwards based on MIDI control
 codes.  You must connect this to an instrument that supports clock messages to use this, such as a sequencer.
@@ -98,7 +98,7 @@ control messages that can simulate a theremin.  You will need something like VCV
 The [Gamepad MIDI Clock](./gp2m/gamepad-midi-clock.html) sends MIDI clock messages whenever a button or thumbpad is
 pressed on a controller.  You must connect this to an instrument that supports clock messages, such as a sequencer.
 
-## PS4chestra
+### PS4chestra
 
 <img src="./gp2m/src/images/ps4_oda_animated_smile.svg" alt="PS4chestra Logo" width="400"/>
 
