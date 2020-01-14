@@ -7,7 +7,7 @@ MIDI device (software or hardware) to hear any sound.
 
 ### Aurora
 
-<img src="./flocking-midi-interchange/demos/images/aurora-all-variations.svg" alt="Aurora Logo" width="400"/>
+<img src="./flocking-midi-interchange/demos/images/aurora-all-variations.svg" alt="Aurora Logo" width="150"/>
 
 The ["Aurora"](./flocking-midi-interchange/demos/aurora.html) compliments a Launchpad Pro by playing a coloured "aura"
 on and around any played notes.
