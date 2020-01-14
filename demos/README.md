@@ -46,7 +46,7 @@ also be played using the onscreen controls.
 
 ### Launchpad Guitar
 
-<img src="./launchpad-guitar/images/guitar.png" alt="Launchpad Guitar Diagram" width="400"/>
+<img src="./launchpad-guitar/images/guitar.png" alt="Launchpad Guitar Diagram" width="400" style="background-color:white"/>
 
 The [Launchpad Guitar](./launchpad-guitar/index.html) retunes a Novation Launchpad to play like a guitar, i.e. the first
 note in each column corresponds to the open note played by one string of a guitar in standard tuning. It's also playable
@@ -100,7 +100,7 @@ pressed on a controller.  You must connect this to an instrument that supports c
 
 ### PS4chestra
 
-<img src="./gp2m/src/images/ps4_oda_animated_smile.svg" alt="PS4chestra Logo" width="400"/>
+<img src="./gp2m/src/images/ps4_oda_animated_smile.svg" alt="PS4chestra Logo" width="400" style="background-color:white"/>
 
 The ["PS4chestra"](./gp2m/ps4chestra.html) is a musical instrument and animated character controlled using a PS4
 controller (it should also work with any other controller, but the tuning may be off).  There's also an
