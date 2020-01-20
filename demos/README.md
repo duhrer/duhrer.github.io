@@ -10,20 +10,24 @@ MIDI device (software or hardware) to hear any sound.
 <img src="./flocking-midi-interchange/demos/images/aurora-all-variations.svg" alt="Aurora Logo" width="150"/>
 
 The ["Aurora"](./flocking-midi-interchange/demos/aurora.html) compliments a Launchpad Pro by playing a coloured "aura"
-on and around any played notes.
+on and around any played notes. The non-playing controls at the bottom of the launchpad change the colour scheme.
 
 ### Bifrost
 
 The ["Bifrost"](./flocking-midi-interchange/demos/bifrost.html) guides the user by only allowing notes to be played that
-would form a chord with the notes that are already held.
+would form a chord with the notes that are already held.  Like the "Aurora", the non-playing controls at the bottom of
+the launchpad change the colour of highlighted lights.
 
 ### Cheatar
 
+The "cheatar", or "cheater's guitar" is designed to emulate strummed guitar chords using a MIDI controller.
+
 The [original version of the Cheatar](./cheatar/index.html) was designed to run on the touchscreen of a Raspberry Pi and
-be used with a Korg Nanopad 2.  It can also be used onscreen.
+be used with a Korg Nanopad 2.  It can also be used onscreen.  The strum algorithm was loosely adapted from observing
+various modes of the Oberheim Strummer.
 
 The ["nano" cheatar](./cheatar/nano.html) is a later effort where you strum the x/y pad of a Korg Nanopad to play
-guitar chords.  You'll need a MIDI controller to use it.
+guitar chords.  You'll need a MIDI controller to use it, ideally one with an x/y pad.
 
 ### Duet
 
@@ -32,12 +36,20 @@ guitar chords.  You'll need a MIDI controller to use it.
 The ["Duet"](./flocking-midi-interchange/demos/duet.html) only plays notes that are held on two connected MIDI
 controllers at the same time.  Requires two MIDI controllers.
 
+The "Duet" can be used in a few ways:
+
+1. Coordinating between two players on separate instruments.
+2. A single player coordinating both of their hands on separate instruments.
+3. Coordinating between multiple sequncers to create more complex patterns that represent only the moments at which they
+   both attempt to play the same note.
+
 ### "Eye of AgaMIDI"
 
 <img src="./eye-of-agamidi/src/images/agamidi-logo.svg" alt="Eye of AgaMIDI Logo" width="400"/>
 
 The ["Eye of AgaMIDI"](./eye-of-agamidi/index.html) moves a MIDI clock forward and backwards based on MIDI control
-codes.  You must connect this to an instrument that supports clock messages to use this, such as a sequencer.
+codes.   An instrument that supports clock messages interprets these clock messages and plays its notes forwards or
+backwards at the selected speed in response.  Best used as input to a sequencer.
 
 ### Flockquencer
 
@@ -60,14 +72,19 @@ play like a guitar.  The pads are lit to match the colour scheme used by the gui
 ### Laser Screwdriver
 
 The ["Laser Screwdriver"](./flocking-midi-interchange/demos/laser-screwdriver.html) retunes a Novation Launchpad or
-Launchpad Pro to use a [tonnetz](https://en.wikipedia.org/wiki/Tonnetz) isometric tuning.
+Launchpad Pro to use a [tonnetz](https://en.wikipedia.org/wiki/Tonnetz) isometric tuning.  In an isometric tuning, once
+you find a shape that corresponds to a chord, you can use that same shape to make the same type of chord in any relative
+position.
 
 ### Lazy Consensus
 
 <img src="./flocking-midi-interchange/demos/images/lazy-consensus.svg" alt="Lazy Consensus Logo" width="400"/>
 
 The ["Lazy Consensus"](./flocking-midi-interchange/demos/lazy-consensus.html) only plays a single note based on the
-average pitch of all held notes.  Requires a MIDI controller.
+average pitch of all held notes.  Among other things:
+
+1. Inadvertently hitting multiple buttons still results in a single clean tone.
+2. Playing on a device such as the Arturia Beatstep results in a kind of bouncing
 
 ### LPiano
 
