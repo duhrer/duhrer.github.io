@@ -103,6 +103,10 @@ instead of the pitch rising from left to right, it rises from right to left.  Ve
 The [MIDI Microtoner](./flocking-midi-microtoner/index.html) splits a single MIDI input into channels and uses
 pitchbend to simulate octaves that consist of far more than 12 notes.
 
+### "Patchbay"
+
+The ["patchbay"](./flocking-midi-interchange/demos/patchbay.html) provides a simple means of adding routings between one or more MIDI devices.
+
 ## Gamepad Demos
 
 ### Analog Stick Theremin
