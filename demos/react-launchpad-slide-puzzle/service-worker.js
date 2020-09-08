@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/demos/react-launchpad-slide-puzzle/precache-manifest.ec0960e565655659d7e45ac2b5518532.js"
+  "/demos/react-launchpad-slide-puzzle/precache-manifest.e93a0e97a4af89f882c0a402b91d67c5.js"
 );
 
 self.addEventListener('message', (event) => {

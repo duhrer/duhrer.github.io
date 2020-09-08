@@ -1,22 +1,25 @@
 {
   "files": {
-    "main.css": "/demos/react-launchpad-slide-puzzle/static/css/main.0603d3f1.chunk.css",
-    "main.js": "/demos/react-launchpad-slide-puzzle/static/js/main.3735db50.chunk.js",
-    "main.js.map": "/demos/react-launchpad-slide-puzzle/static/js/main.3735db50.chunk.js.map",
+    "main.css": "/demos/react-launchpad-slide-puzzle/static/css/main.681a21b4.chunk.css",
+    "main.js": "/demos/react-launchpad-slide-puzzle/static/js/main.8c31415c.chunk.js",
+    "main.js.map": "/demos/react-launchpad-slide-puzzle/static/js/main.8c31415c.chunk.js.map",
     "runtime-main.js": "/demos/react-launchpad-slide-puzzle/static/js/runtime-main.27936046.js",
     "runtime-main.js.map": "/demos/react-launchpad-slide-puzzle/static/js/runtime-main.27936046.js.map",
-    "static/js/2.62822b87.chunk.js": "/demos/react-launchpad-slide-puzzle/static/js/2.62822b87.chunk.js",
-    "static/js/2.62822b87.chunk.js.map": "/demos/react-launchpad-slide-puzzle/static/js/2.62822b87.chunk.js.map",
+    "static/css/2.11829350.chunk.css": "/demos/react-launchpad-slide-puzzle/static/css/2.11829350.chunk.css",
+    "static/js/2.b7b130ce.chunk.js": "/demos/react-launchpad-slide-puzzle/static/js/2.b7b130ce.chunk.js",
+    "static/js/2.b7b130ce.chunk.js.map": "/demos/react-launchpad-slide-puzzle/static/js/2.b7b130ce.chunk.js.map",
     "index.html": "/demos/react-launchpad-slide-puzzle/index.html",
-    "precache-manifest.ec0960e565655659d7e45ac2b5518532.js": "/demos/react-launchpad-slide-puzzle/precache-manifest.ec0960e565655659d7e45ac2b5518532.js",
+    "precache-manifest.e93a0e97a4af89f882c0a402b91d67c5.js": "/demos/react-launchpad-slide-puzzle/precache-manifest.e93a0e97a4af89f882c0a402b91d67c5.js",
     "service-worker.js": "/demos/react-launchpad-slide-puzzle/service-worker.js",
-    "static/css/main.0603d3f1.chunk.css.map": "/demos/react-launchpad-slide-puzzle/static/css/main.0603d3f1.chunk.css.map",
-    "static/js/2.62822b87.chunk.js.LICENSE.txt": "/demos/react-launchpad-slide-puzzle/static/js/2.62822b87.chunk.js.LICENSE.txt"
+    "static/css/2.11829350.chunk.css.map": "/demos/react-launchpad-slide-puzzle/static/css/2.11829350.chunk.css.map",
+    "static/css/main.681a21b4.chunk.css.map": "/demos/react-launchpad-slide-puzzle/static/css/main.681a21b4.chunk.css.map",
+    "static/js/2.b7b130ce.chunk.js.LICENSE.txt": "/demos/react-launchpad-slide-puzzle/static/js/2.b7b130ce.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.27936046.js",
-    "static/js/2.62822b87.chunk.js",
-    "static/css/main.0603d3f1.chunk.css",
-    "static/js/main.3735db50.chunk.js"
+    "static/css/2.11829350.chunk.css",
+    "static/js/2.b7b130ce.chunk.js",
+    "static/css/main.681a21b4.chunk.css",
+    "static/js/main.8c31415c.chunk.js"
   ]
 }
