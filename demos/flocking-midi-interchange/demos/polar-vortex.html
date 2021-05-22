@@ -1,6 +1,6 @@
 <html>
 <head>
-    <title>"Extended Release" Demo</title>
+    <title>Polar Vortex</title>
 
     <script src="../node_modules/infusion/dist/infusion-all.js"></script>
 
@@ -22,18 +22,36 @@
 
     <script src="../src/js/router.js"></script>
 
-    <script src="./js/extended-release.js"></script>
-</head>
-<body bgcolor="black">
-    <h1>"Extended Release" Demo</h1>
+    <script src="./js/launchpad-pong.js"></script>
+    <script src="./js/polar-vortex.js"></script>
 
-    <div class="extended-release-container">
-        <div class="note-input"></div>
-        <div class="note-output"></div>
+    <link rel="stylesheet" href="./css/polar-vortex.css"/>
+</head>
+<body>
+<div id="polar-vortex-loom">
+    <h2 class="polar-vortex-title">Polar Vortex</h2>
+
+    <div class="visualisation"></div>
+
+    <div class="readouts">
+        <div class="attraction__container" tabindex="0">
+            <h4>Attraction</h4>
+            <div class="attraction__value"></div>
+        </div>
+        <div class="rotation__container" tabindex="0">
+            <h4>Rotation</h4>
+            <div class="rotation__value"></div>
+        </div>
     </div>
 
-    <script type="text/javascript">
-        var extendedRelease = flock.midi.interchange.demos.extendedRelease(".extended-release-container");
-    </script>
+    <div class="midi-selectors">
+        <div class="note-input"></div>
+        <div class="ui-output"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    var polarVortex = flock.midi.interchange.demos.polarVortex("body");
+</script>
 </body>
 </html>

@@ -1,6 +1,6 @@
 <html>
 <head>
-    <title>"Extended Release" Demo</title>
+    <title>Launchpad Pong</title>
 
     <script src="../node_modules/infusion/dist/infusion-all.js"></script>
 
@@ -21,19 +21,21 @@
     <script src="../node_modules/bergson/dist/bergson-only.js"></script>
 
     <script src="../src/js/router.js"></script>
+    <script src="../src/js/tunings/launchpad-pro-to-common.js"></script>
 
-    <script src="./js/extended-release.js"></script>
+    <script src="./js/launchpad-pong.js"></script>
+    <script src="./js/launchpad-pong-multiball.js"></script>
 </head>
-<body bgcolor="black">
-    <h1>"Extended Release" Demo</h1>
+<body>
+<div id="launchpad-pong-loom">
+    <div class="note-input"></div>
+    <div class="note-output"></div>
 
-    <div class="extended-release-container">
-        <div class="note-input"></div>
-        <div class="note-output"></div>
-    </div>
+    <div class="ui-output"></div>
+</div>
 
-    <script type="text/javascript">
-        var extendedRelease = flock.midi.interchange.demos.extendedRelease(".extended-release-container");
-    </script>
+<script type="text/javascript">
+    flock.midi.interchange.demos.launchpadPong.multiball("body");
+</script>
 </body>
 </html>

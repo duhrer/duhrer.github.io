@@ -1,6 +1,6 @@
 <html>
 <head>
-    <title>"Extended Release" Demo</title>
+    <title>"Uniformly Highlighted Launchpad Pro" Demo</title>
 
     <script src="../node_modules/infusion/dist/infusion-all.js"></script>
 
@@ -17,23 +17,25 @@
     <script src="../node_modules/flocking-midi/src/ui/connector-view/js/connector-view.js"></script>
     <script src="../node_modules/flocking-midi/src/ui/message-monitor-view/js/message-monitor-view.js"></script>
 
-    <!-- Bergson dependencies -->
-    <script src="../node_modules/bergson/dist/bergson-only.js"></script>
-
     <script src="../src/js/router.js"></script>
+    <script src="../src/js/tunings/launchpad-pro-to-common.js"></script>
+    <script src="../src/js/tunings/launchpad-pro-to-highlighted.js"></script>
 
-    <script src="./js/extended-release.js"></script>
+    <script src="./js/launchpad-highlighted-notes.js"></script>
+    <style>
+        .highlighted-loom { margin-top: 5em; }
+    </style>
 </head>
 <body bgcolor="black">
-    <h1>"Extended Release" Demo</h1>
 
-    <div class="extended-release-container">
+    <div class="highlighted-loom">
         <div class="note-input"></div>
+        <div class="ui-output"></div>
         <div class="note-output"></div>
     </div>
 
     <script type="text/javascript">
-        var extendedRelease = flock.midi.interchange.demos.extendedRelease(".extended-release-container");
+        var consensus = flock.midi.interchange.demos.highlights(".highlighted-loom");
     </script>
 </body>
 </html>
