@@ -81,6 +81,7 @@ fluid.defaults("flock.midi.interchange.generator", {
         "./node_modules/flocking-midi/src/ui/message-monitor-view/js/message-monitor-view.js",
         "./node_modules/flocking-midi/src/ui/port-selector/js/port-select-box.js",
         "./node_modules/flocking-midi/src/ui/port-selector/js/port-selector.js",
+        "./node_modules/flocking/src/ui/selectbox/js/selectbox.js",
         "./node_modules/infusion/dist/infusion-all.js",
         "./node_modules/tone/build/Tone.js"
     ],
