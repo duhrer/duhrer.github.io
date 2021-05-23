@@ -70,7 +70,7 @@
     fluid.registerNamespace("flock.midi.interchange.connector.input");
 
     flock.midi.interchange.connector.input.detectAftertouchType = function (message) {
-        return message.note !== undefined ? "polyAftertouch" : "channelAftertouch"
+        return message.note !== undefined ? "polyAftertouch" : "channelAftertouch";
     };
 
     flock.midi.interchange.connector.input.midiMessageToModelChange = function (that, message) {
@@ -85,7 +85,7 @@
 
     fluid.defaults("flock.midi.interchange.connector.input", {
         portType: "input",
-        gradeNames: ["flock.auto.ui.midiConnector"],
+        gradeNames: ["flock.midi.connectorView"],
         rules: {
             note: {
                 pathSegments: [
@@ -209,7 +209,7 @@
     };
 
     fluid.defaults("flock.midi.interchange.connector.output", {
-        gradeNames: ["flock.auto.ui.midiConnector"],
+        gradeNames: ["flock.midi.connectorView"],
         portType: "output",
         // inverse transforms based on change and path
         rules: {

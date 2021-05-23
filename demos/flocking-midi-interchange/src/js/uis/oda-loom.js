@@ -47,16 +47,16 @@
         },
         components: {
             uiOutput: {
-                type: "flock.auto.ui.midiConnector",
+                type: "flock.midi.connectorView",
                 container: "{that}.dom.uiOutput",
                 options: {
-                    preferredDevice: "{loom}.options.preferredUiOutput",
+                    preferredPort: "{loom}.options.preferredUiOutput",
                     portType: "output",
                     components: {
                         midiPortSelector: {
                             options: {
                                 strings: {
-                                    selectBoxLabel: "UI Output",
+                                    selectBoxLabel: "UI Output"
                                 }
                             }
                         },
@@ -97,7 +97,7 @@
             },
             noteInput: {
                 options: {
-                    preferredDevice: "{loom}.options.preferredInput",
+                    preferredPort: "{loom}.options.preferredInput",
                     listeners: {
                         "control.displayOnOda": {
                             func: "{oda}.events.control.fire",
@@ -119,5 +119,5 @@
                 }
             }
         }
-    })
+    });
 })(fluid, flock);

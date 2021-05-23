@@ -37,14 +37,8 @@ flock.midi.interchange.generator.makeBundle = function (that) {
 
     promises.push(function () {
         var dirCreationPromise = fluid.promise();
-        mkdirp(that.options.targetDir, function (error) {
-            if (error) {
-                dirCreationPromise.reject(error);
-            }
-            else {
-                dirCreationPromise.resolve();
-            }
-        });
+        var mkdirpPromise = mkdirp(that.options.targetDir);
+        mkdirpPromise.then(dirCreationPromise.resolve, dirCreationPromise.reject);
         return dirCreationPromise;
     });
 
@@ -78,16 +72,17 @@ fluid.defaults("flock.midi.interchange.generator", {
         "./demos",
         "./dist",
         "./node_modules/bergson/dist/bergson-only.js",
-        "./node_modules/flocking-midi-select-ng/src/js/auto-midi-connector.js",
-        "./node_modules/flocking-midi-select-ng/src/js/auto-midi-port-selector.js",
-        "./node_modules/flocking-midi-select-ng/src/js/auto-midi-system.js",
-        "./node_modules/flocking-midi-select-ng/src/js/select-box.js",
-        "./node_modules/flocking/dist/flocking-all.js",
-        "./node_modules/flocking/dist/flocking-base.js",
-        "./node_modules/flocking/src/ui/midi/midi-connector/js/midi-connector.js",
-        "./node_modules/flocking/src/ui/midi/midi-port-selector/js/midi-port-selector.js",
-        "./node_modules/flocking/src/ui/selectbox/js/selectbox.js",
-        "./node_modules/infusion/dist/infusion-all.js"
+        "./node_modules/flocking-midi/src/connection.js",
+        "./node_modules/flocking-midi/src/controller.js",
+        "./node_modules/flocking-midi/src/core.js",
+        "./node_modules/flocking-midi/src/receiver.js",
+        "./node_modules/flocking-midi/src/system.js",
+        "./node_modules/flocking-midi/src/ui/connector-view/js/connector-view.js",
+        "./node_modules/flocking-midi/src/ui/message-monitor-view/js/message-monitor-view.js",
+        "./node_modules/flocking-midi/src/ui/port-selector/js/port-select-box.js",
+        "./node_modules/flocking-midi/src/ui/port-selector/js/port-selector.js",
+        "./node_modules/infusion/dist/infusion-all.js",
+        "./node_modules/tone/build/Tone.js"
     ],
     listeners: {
         "onCreate.createBundle": {
