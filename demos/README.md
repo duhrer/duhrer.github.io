@@ -64,10 +64,20 @@ The [Launchpad Guitar](./launchpad-guitar/index.html) retunes a Novation Launchp
 note in each column corresponds to the open note played by one string of a guitar in standard tuning. It's also playable
 onscreen.
 
-### Launchpad Pro Guitar
+### Launchpad Guitar Pro
 
-The [Launchpad Pro Guitar](./flocking-midi-interchange/demos/launchpad-pro.html) retunes a Novation Launchpad Pro to
+The [Launchpad Guitar Pro](./flocking-midi-interchange/demos/launchpad-pro.html) retunes a Novation Launchpad Pro to
 play like a guitar.  The pads are lit to match the colour scheme used by the guitar learning game Rocksmith.
+
+### Launchpad Pong
+
+[Launchpad Pong](./flocking-midi-interchange/demos/launchpad-pong.html) presents a "ball" that is played as a note. The
+ball moves around in response to the pads the user hits on a connected Launchpad Pro.
+
+### Launchpad Pong (Multiball)
+
+[The "multiball" version of Launchpad Pong](./flocking-midi-interchange/demos/launchpad-pong.html) adds support for
+multiple "balls" simultaneously, and rules for how they collide with each other.
 
 ### Laser Screwdriver
 
@@ -103,9 +113,20 @@ instead of the pitch rising from left to right, it rises from right to left.  Ve
 The [MIDI Microtoner](./flocking-midi-microtoner/index.html) splits a single MIDI input into channels and uses
 pitchbend to simulate octaves that consist of far more than 12 notes.
 
+### "Nano Gurdy"
+
+A software instrument that simulates a hurdy gurdy
+
 ### "Patchbay"
 
 The ["patchbay"](./flocking-midi-interchange/demos/patchbay.html) provides a simple means of adding routings between one or more MIDI devices.
+
+### "Polar Vortex"
+
+The ["polar vortex"](./flocking-midi-interchange/demos/polar-vortex.html) is a polar-coordinate based instrument in
+which each note is tracked by its angle relative to the centre and distance from the centre.  The centre
+can be configured to attract or repel notes, and rotation is also configurable.  The state of the notes is quantised
+into a grid that is displayed onscreen and also on a connected Launchpad Pro.
 
 ## Gamepad Demos
 
