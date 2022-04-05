@@ -125,6 +125,14 @@
                 funcName: "osk.key.handleDown",
                 args: ["{that}", "{arguments}.0"] // event
             },
+            handleMouseClick: {
+                funcName: "osk.key.handleClick",
+                args: ["{that}", "{arguments}.0", true] // event, preventDefault
+            },
+            handleKeyClick: {
+                funcName: "osk.key.handleKeyClick",
+                args: ["{that}", "{arguments}.0"] // event
+            },
             handleUp: {
                 funcName: "osk.key.handleUp",
                 args: ["{that}", "{arguments}.0"] // event
@@ -146,6 +154,11 @@
                 method: "mousedown",
                 args: ["{that}.handleDown"]
             },
+            "onCreate.bindMouseClick": {
+                this: "{that}.container",
+                method: "click",
+                args: ["{that}.handleMouseClick"]
+            },
             "onCreate.bindMouseup": {
                 this: "{that}.container",
                 method: "mouseup",
@@ -160,6 +173,11 @@
                 this: "{that}.container",
                 method: "keydown",
                 args: ["{that}.handleKeydown"]
+            },
+            "onCreate.bindKeyClick": {
+                this: "{that}.container",
+                method: "keydown",
+                args: ["{that}.handleKeyClick"]
             },
             "onCreate.bindKeyup": {
                 this: "{that}.container",
@@ -188,6 +206,21 @@
             event.preventDefault();
 
             that.applier.change("isDown", true);
+        }
+    };
+
+    osk.key.handleKeyClick = function (that, event) {
+        var eventCode = fluid.get(event, "code");
+        if (eventCode === "Space" || eventCode === "Enter") {
+            osk.key.handleClick(that, event, false);
+        }
+    };
+
+    osk.key.handleClick = function (that, event, preventDefault) {
+        if (!that.model.isDeactivated) {
+            if (preventDefault) {
+                event.preventDefault();
+            }
 
             that.events.onAction.fire({
                 action: that.options.action,
@@ -201,10 +234,12 @@
     };
 
     osk.key.handleUp = function (that, event) {
-        event.preventDefault();
+        if (!that.model.isDeactivated) {
+            event.preventDefault();
 
-        if (!that.options.latch) {
-            that.applier.change("isDown", false);
+            if (!that.options.latch) {
+                that.applier.change("isDown", false);
+            }
         }
     };
 
@@ -219,10 +254,14 @@
         var eventCode = fluid.get(event, "code");
         // TODO: Make the navigable grade use this key handler first and pass on to the other function if it's not
         // an arrow key we're seeing.
+
         // Arrow handling
         if (["ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown"].indexOf(eventCode) !== -1) {
             event.preventDefault();
-            that.applier.change("isDown", false);
+
+            if (!that.options.latch) {
+                that.applier.change("isDown", false);
+            }
 
             if (eventCode === "ArrowLeft") {
                 var previousCol = that.model.focusedCol > 0 ? that.model.focusedCol - 1 : that.options.rowCols - 1;
@@ -309,26 +348,16 @@
         that.applier.change("focusedRow", that.model.row);
     };
 
-    // TODO: Find a way to get rid of this
     osk.key.space.handleKeyDown = function (that, event, callback) {
-
         var eventCode = fluid.get(event, "code");
         // Arrow handling
-        // TODO: Convert these to special actions and move the logic to the layout.
-        if (["ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown"].indexOf(eventCode) !== -1) {
+        if (["ArrowUp", "ArrowDown"].indexOf(eventCode) !== -1) {
             event.preventDefault();
-            that.applier.change("isDown", false);
+            if (!that.options.latch) {
+                that.applier.change("isDown", false);
+            }
 
-            if (eventCode === "ArrowLeft") {
-                // Wrap around based on the width of the other rows.
-                var previousCol = that.model.focusedCol > 0 ? that.model.focusedCol - 1 : 15;
-                that.applier.change("focusedCol", previousCol);
-            }
-            else if (eventCode === "ArrowRight") {
-                var nextCol = that.model.focusedCol <  14 ? that.model.focusedCol + 1 : 0;
-                that.applier.change("focusedCol", nextCol);
-            }
-            else if (eventCode === "ArrowUp") {
+            if (eventCode === "ArrowUp") {
                 var previousRow = that.model.focusedRow > 0 ? that.model.focusedRow - 1 : that.options.numRows - 1;
                 that.applier.change("focusedRow", previousRow);
             }
