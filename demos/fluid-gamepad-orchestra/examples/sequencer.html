@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Fluid Gamepad Orchestra : Sequencer</title>
+
+        <script src="../node_modules/infusion/dist/infusion-all.js"></script>
+        <script src="../node_modules/bergson/dist/bergson-only.js"></script>
+
+        <script src="../src/js/axis.js"></script>
+        <script src="../src/js/button.js"></script>
+        <script src="../src/js/gamepad.js"></script>
+        <script src="../src/js/gamepads.js"></script>
+        <script src="../src/js/orchestra.js"></script>
+        <script src="../src/js/stringTemplateRenderingView.js"></script>
+
+        <script src="./js/sequencer.js"></script>
+
+        <link rel="stylesheet" href="../src/css/orchestra.css"/>
+        <link rel="stylesheet" href="./css/sequencer.css"/>
+    </head>
+    <body>
+        <h2>Fluid Gamepad - "Sequencer"</h2>
+
+        <p>
+            Each gamepad controls its own sequence of pulses (vibrations).
+        </p>
+
+        <div class="orchestra-container"></div>
+
+        <h5>Controls</h5>
+
+        <p>
+            The d-pad navigates the grid (sequence).  The face buttons Bumpers control the BPM.
+        </p>
+
+        <p>Button 0 (X on a Playstation controller) sets the strong and weak vibration value for the step to 100%.</p>
+
+        <p>Button 1 (circle on a Playstation controller) sets the strong and weak vibration value for the step to 0.</p>
+
+        <p>Button 2 (square on a Playstation controller) sets the strong vibration to 100% and the weak to 0%.</p>
+
+        <p>Button 3 (triangle on a Playstation controller) sets the strong vibration to 0% and the weak to 100%.</p>
+
+        <script>
+            var component = fluid.gamepad.orchestra.examples.sequencer(".orchestra-container");
+        </script>
+    </body>
+</html>
