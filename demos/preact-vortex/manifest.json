@@ -1,7 +1,7 @@
 {
   "name": "preact-vortex",
   "short_name": "preact-vortex",
-  "start_url": "/",
+  "start_url": "/demos/preact-vortex/",
   "display": "standalone",
   "orientation": "portrait",
   "background_color": "#fff",
