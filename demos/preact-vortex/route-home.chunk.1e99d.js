@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[2],{"+1Jk":function(n,e,t){"use strict";t.r(e);var o=t("hosL"),a="home__uRcqa";e.default=function(){return Object(o.h)("div",{class:a},Object(o.h)("h1",null,"Home"),Object(o.h)("p",null,"A demonstration of preact and rapid state/prop changes."))}}}]);
-//# sourceMappingURL=route-home.chunk.1e99d.js.map
