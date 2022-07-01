@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Aftertouch Demo</title>
+
+        <script src="../../node_modules/infusion/dist/infusion-all.js"></script>
+
+        <!-- YouMe requirements -->
+        <script src="../../node_modules/youme/src/js/core.js"></script>
+        <script src="../../node_modules/youme/src/js/system.js"></script>
+        <script src="../../node_modules/youme/src/js/messageEventHolders.js"></script>
+        <script src="../../node_modules/youme/src/js/connection.js"></script>
+        <script src="../../node_modules/youme/src/js/portConnector.js"></script>
+        <script src="../../node_modules/youme/src/js/ui/templateRenderer.js"></script>
+        <script src="../../node_modules/youme/src/js/ui/selectBox.js"></script>
+        <script src="../../node_modules/youme/src/js/ui/portSelectorView.js"></script>
+
+        <script src="../js/stringTemplateRenderingView.js"></script>
+        <script src="../js/pad.js"></script>
+        <script src="../js/gridDefs.js"></script>
+        <script src="../js/grid.js"></script>
+        <script src="../js/router.js"></script>
+
+        <script src="../js/aftertouch.js"></script>
+
+        <link rel="stylesheet" href="../../node_modules/youme/src/css/youme.css"/>
+        <link rel="stylesheet" href="../css/lsu.css"/>
+    </head>
+    <body>
+        <h3>Aftertouch Demo</h3>
+
+        <div class="aftertouch"></div>
+
+        <a href="../../index.html">Select A Different Journey</a>
+
+        <script>
+            var lsu = fluid.registerNamespace("lsu");
+            var component = lsu.aftertouch(".aftertouch");
+        </script>
+    </body>
+</html>
