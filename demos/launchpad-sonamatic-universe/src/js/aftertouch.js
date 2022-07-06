@@ -3,140 +3,187 @@
     var lsu = fluid.registerNamespace("lsu");
     fluid.defaults("lsu.aftertouch", {
         gradeNames: ["lsu.router.colour"],
+        members: {
+            shouldRedraw: true
+        },
         model: {
+            velocityGrid: "@expand:lsu.generateEmptyGrid(10, 10)",
+            notes: {},
             channelPressure: 0
         },
         bleedPercentage: 0.25,
         modelListeners: {
-            "notes": {
-                excludeSource: "init",
-                funcName: "lsu.aftertouch.updateDeviceColourMap",
-                args: ["{that}"]
+            velocityGrid: {
+                funcName: "fluid.set",
+                args: ["{that}", "shouldRedraw", true]
             },
-            "channelPressure": {
-                excludeSource: "init",
-                funcName: "lsu.aftertouch.updateDeviceColourMap",
+            channelPressure: {
+                funcName: "fluid.set",
+                args: ["{that}", "shouldRedraw", true]
+            }
+        },
+        invokers: {
+            "updateColourGrid": {
+                funcName: "lsu.aftertouch.updateColourGrid",
                 args: ["{that}"]
             }
         },
+        listeners: {
+            "onCreate.startPolling": {
+                funcName: "lsu.aftertouch.startPolling",
+                args: ["{berg.scheduler}", "{that}.updateColourGrid"] // scheduler, callback
+            }
+        },
         components: {
-            grid: {
+            // We use a bergson scheduler to poll for updates because aftertouch events are fired far too quickly for
+            // even a Pro MK3 to keep up with.
+            scheduler: {
+                type: "berg.scheduler",
                 options: {
-                    listeners: {
-                        "onPadMessage.handlePadMessage": {
-                            funcName: "lsu.aftertouch.handlePadMessage",
-                            args: ["{that}", "{arguments}.0"] // midiMessage
+                    components: {
+                        clock: {
+                            type: "berg.clock.raf",
+                            options: {
+                                freq: 60 // times per second
+                            }
                         }
                     }
                 }
             },
-            noteInput: {
+            noteInputs: {
                 options: {
                     listeners: {
                         "onAftertouch.registerPressure": {
                             funcName: "lsu.aftertouch.registerPressure",
                             args: ["{lsu.aftertouch}", "{arguments}.0"] // midiMessage
                         },
-                        "onAftertouch.sendToNoteOut": "{noteOutput}.events.sendAftertouch.fire",
-                        "onNoteOn.sendToNoteOut": "{noteOutput}.events.sendNoteOn.fire",
-                        "onNoteOff.sendToNoteOut": "{noteOutput}.events.sendNoteOff.fire"
+
+                        // Relay to output(s).
+                        "onAftertouch.sendToNoteOut": "{noteOutputs}.events.sendAftertouch.fire",
+                        "onNoteOn.sendToNoteOut": "{noteOutputs}.events.sendNoteOn.fire",
+                        "onNoteOff.sendToNoteOut": "{noteOutputs}.events.sendNoteOff.fire"
+                    },
+                    components: {
+                        portConnector: {
+                            options: {
+                                dynamicComponents: {
+                                    connection: {
+                                        options: {
+                                            listeners: {
+                                                "onPadDown.updateVelocityGrid": {
+                                                    funcName: "lsu.aftertouch.handlePadChange",
+                                                    args: ["{lsu.aftertouch}", "{arguments}.0"] // padMessage
+                                                },
+                                                "onPadUp.updateVelocityGrid": {
+                                                    funcName: "lsu.aftertouch.handlePadChange",
+                                                    args: ["{lsu.aftertouch}", "{arguments}.0"] // padMessage
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
                     }
                 }
             }
         }
     });
 
-    lsu.aftertouch.generateVelocityGrid = function () {
-        var singleRow = fluid.generate(8, 0);
-        var allRows = fluid.generate(8, function () {
-            return fluid.copy(singleRow);
-        }, true);
-        return allRows;
+    lsu.aftertouch.startPolling = function (scheduler, callback) {
+        scheduler.schedule({
+            type: "repeat",
+            freq: 10, // times per second
+            callback: callback
+        });
+
+        scheduler.start();
     };
 
-    lsu.aftertouch.updateDeviceColourMap = function (that) {
-        var velocityGrid = lsu.aftertouch.generateVelocityGrid();
-        for (var gridRow = 0; gridRow < 8; gridRow++) {
-            for (var gridCol = 0; gridCol < 8; gridCol++) {
-                var velocityNoteNumber = (10 * (gridRow + 1)) + (gridCol + 1);
-                var velocity = fluid.get(that, ["model", "notes", velocityNoteNumber]);
-                velocityGrid[gridRow][gridCol] += velocity;
-                if (velocity && that.model.channelPressure) {
-                    var pressurePercentage = that.model.channelPressure / 127;
-                    var adjacentCellVelocityBleed = velocity * pressurePercentage * that.options.bleedPercentage;
+    lsu.aftertouch.updateColourGrid = function (that) {
+        if (that.shouldRedraw) {
+            // Clear this first to avoid lapping ourselves.
+            that.shouldRedraw = false;
 
-                    var rowBelow = gridRow - 1;
-                    var rowAbove = gridRow + 1;
-                    var colToLeft = gridCol - 1;
-                    var colToRight = gridCol + 1;
+            var blurredVelocityGrid = lsu.generateEmptyGrid(10, 10);
+            for (var gridRow = 0; gridRow < 10; gridRow++) {
+                for (var gridCol = 0; gridCol < 10; gridCol++) {
+                    var velocity = fluid.get(that, ["model", "velocityGrid", gridRow, gridCol]) || 0;
+                    if (velocity && that.model.channelPressure) {
+                        var pressurePercentage = that.model.channelPressure / 127;
+                        var adjacentCellVelocityBleed = velocity * pressurePercentage * that.options.bleedPercentage;
 
-                    // South
-                    if (rowBelow >= 0) {
-                        velocityGrid[rowBelow][gridCol] = Math.min(127, velocityGrid[rowBelow][gridCol] + adjacentCellVelocityBleed);
-                    }
-                    // SouthWest
-                    if (rowBelow >= 0 && colToLeft >= 0) {
-                        velocityGrid[rowBelow][colToLeft] = Math.min(127, velocityGrid[rowBelow][colToLeft] + adjacentCellVelocityBleed);
-                    }
-                    // West
-                    if (colToLeft >= 0) {
-                        velocityGrid[gridRow][colToLeft] = Math.min(127, velocityGrid[gridRow][colToLeft] + adjacentCellVelocityBleed);
-                    }
-                    // TODO: Doesn't do anything at the moment.
-                    // NorthWest
-                    if (rowAbove < 8 && colToLeft >= 0) {
-                        velocityGrid[rowAbove][colToLeft] = Math.min(127, velocityGrid[rowAbove][colToLeft] + adjacentCellVelocityBleed);
-                    }
-                    // TODO: Doesn't do anything at the moment.
-                    // North
-                    if (rowAbove < 8) {
-                        velocityGrid[rowAbove][gridCol] = Math.min(127, velocityGrid[rowAbove][gridCol] + adjacentCellVelocityBleed);
-                    }
-                    // TODO: Doesn't do anything at the moment.
-                    // NorthEast
-                    if (rowAbove < 8 && colToRight < 8) {
-                        velocityGrid[rowAbove][colToRight] = Math.min(127, velocityGrid[rowAbove][colToRight] + adjacentCellVelocityBleed);
-                    }
-                    // TODO: Doesn't do anything at the moment.
-                    // East
-                    if (colToRight < 8) {
-                        velocityGrid[gridRow][colToRight] = Math.min(127, velocityGrid[gridRow][colToRight] + adjacentCellVelocityBleed);
-                    }
-                    // SouthEast
-                    if (rowBelow >= 0 && colToRight < 8) {
-                        velocityGrid[rowBelow][colToRight] = Math.min(127, velocityGrid[rowBelow][colToRight] + adjacentCellVelocityBleed);
+                        var rowBelow = gridRow - 1;
+                        var rowAbove = gridRow + 1;
+                        var colToLeft = gridCol - 1;
+                        var colToRight = gridCol + 1;
+
+                        // Centre
+                        blurredVelocityGrid[gridRow][gridCol] = Math.min(127, blurredVelocityGrid[gridRow][gridCol] + velocity);
+
+                        // South
+                        if (rowBelow >= 0) {
+                            blurredVelocityGrid[rowBelow][gridCol] = Math.min(127, blurredVelocityGrid[rowBelow][gridCol] + adjacentCellVelocityBleed);
+                        }
+                        // SouthWest
+                        if (rowBelow >= 0 && colToLeft >= 0) {
+                            blurredVelocityGrid[rowBelow][colToLeft] = Math.min(127, blurredVelocityGrid[rowBelow][colToLeft] + adjacentCellVelocityBleed);
+                        }
+                        // West
+                        if (colToLeft >= 0) {
+                            blurredVelocityGrid[gridRow][colToLeft] = Math.min(127, blurredVelocityGrid[gridRow][colToLeft] + adjacentCellVelocityBleed);
+                        }
+                        // NorthWest
+                        if (rowAbove < 10 && colToLeft >= 0) {
+                            blurredVelocityGrid[rowAbove][colToLeft] = Math.min(127, blurredVelocityGrid[rowAbove][colToLeft] + adjacentCellVelocityBleed);
+                        }
+                        // North
+                        if (rowAbove < 10) {
+                            blurredVelocityGrid[rowAbove][gridCol] = Math.min(127, blurredVelocityGrid[rowAbove][gridCol] + adjacentCellVelocityBleed);
+                        }
+                        // NorthEast
+                        if (rowAbove < 10 && colToRight < 10) {
+                            blurredVelocityGrid[rowAbove][colToRight] = Math.min(127, blurredVelocityGrid[rowAbove][colToRight] + adjacentCellVelocityBleed);
+                        }
+                        // East
+                        if (colToRight < 10) {
+                            blurredVelocityGrid[gridRow][colToRight] = Math.min(127, blurredVelocityGrid[gridRow][colToRight] + adjacentCellVelocityBleed);
+                        }
+                        // SouthEast
+                        if (rowBelow >= 0 && colToRight < 10) {
+                            blurredVelocityGrid[rowBelow][colToRight] = Math.min(127, blurredVelocityGrid[rowBelow][colToRight] + adjacentCellVelocityBleed);
+                        }
                     }
                 }
             }
-        }
 
-        var newDeviceColours = fluid.generate(128, 0);
+            var newGridColours = lsu.generateDefaultColourMap();
 
-        for (var row = 0; row < 8; row++) {
-            for (var col = 0; col < 8; col++) {
-                var noteNumber = (10 * (row + 1)) + (col + 1);
-                var noteVelocity = velocityGrid[row][col];
-                if (noteVelocity) {
-                    var rValue = lsu.router.colour.calculateSingleColor(that, "r", noteVelocity / 127);
-                    var gValue = lsu.router.colour.calculateSingleColor(that, "g", noteVelocity / 127);
-                    var bValue = lsu.router.colour.calculateSingleColor(that, "b", noteVelocity / 127);
-                    newDeviceColours[noteNumber] = { r: rValue, g: gValue, b: bValue};
+            for (var row = 1; row < 10; row++) {
+                for (var col = 0; col < 10; col++) {
+                    var noteVelocity = fluid.get(blurredVelocityGrid, [row, col]) || 0;
+                    if (noteVelocity) {
+                        var rValue = lsu.router.colour.calculateSingleColor(that, "r", noteVelocity / 127);
+                        var gValue = lsu.router.colour.calculateSingleColor(that, "g", noteVelocity / 127);
+                        var bValue = lsu.router.colour.calculateSingleColor(that, "b", noteVelocity / 127);
+                        newGridColours[row][col] = { r: rValue, g: gValue, b: bValue};
+                    }
                 }
-            }
-        };
+            };
 
-        that.applier.change("deviceColours", newDeviceColours);
-    };
+            // Preserve the colour controls.
+            newGridColours[0] = fluid.copy(that.model.gridColours[0]);
 
-    lsu.aftertouch.handlePadMessage = function (that, midiMessage) {
-        if (midiMessage.type === "control") {
-            that.applier.change(["controls", midiMessage.number], midiMessage.value);
-        }
-        else if (midiMessage.type === "note") {
-            that.applier.change(["notes", midiMessage.note], midiMessage.velocity);
+            fluid.replaceModelValue(that.applier, "gridColours", newGridColours);
         }
     };
 
+    lsu.aftertouch.handlePadChange = function (that, padMessage) {
+        if (padMessage.row && padMessage.col) {
+            var velocity = fluid.get(padMessage, "velocity") || 0;
+            that.applier.change(["velocityGrid", padMessage.row, padMessage.col], velocity);
+        }
+    };
 
     lsu.aftertouch.registerPressure = function (that, midiMessage) {
         that.applier.change("channelPressure", fluid.get(midiMessage, "pressure") || 0);
