@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>WebASM Webcam Filter Demo</title>
+        <!-- <script type="module">
+        import { add } from "./build/release.js";
+        document.body.innerText = add(1, 2);
+        </script> -->
+        <link rel="stylesheet" href="./src/css/main.css">
+    </head>
+    <body>
+        <div class="content">
+            <div class="header">
+                <div>
+                    Device:
+                    <select id="input-picker">
+                        <option>Detecting devices...</option>
+                    </select>        
+                </div>
+                <div>
+                    Filter:
+                    <select id="filter-picker">
+                        <option value="none">None</option>
+                        <option value="jsScanlines">Simulate scan lines (Javascript)</option>
+                        <option value="jsVerticalHold">Simulate vertical hold failure (Javascript)</option>
+                    </select>        
+                </div>
+            </div>
+    
+    
+            <video id="video" class="hidden">Waiting for video...</video>
+    
+            <canvas id="visible-canvas"></canvas>
+    
+            <div class="footer">
+                <div class="fps hidden">
+                    <span id="fps-counter"></span> FPS
+                </div>    
+            </div>
+        </div>
+
+        <script src="./src/js/video-filter.js"></script>
+    </body>
+</html>
