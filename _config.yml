@@ -1,1 +1,58 @@
-theme: jekyll-theme-midnight
+domain: duhrer.github.io
+remote_theme: daattali/beautiful-jekyll@6.0.1
+
+title: Tony's Timeline
+author: Tony Atkins
+
+description: "Things I'm working on and thinking about."
+
+timezone: "Europe/Amsterdam"
+markdown: kramdown
+permalink: /:year-:month-:day-:title/
+excerpt_separator: <!--more-->
+
+post_search: true
+
+navbar-links:
+  Notes: "/blogs"
+  Demos: "/demos"
+
+kramdown:
+  input: GFM
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+
+plugins:
+  - jekyll-sitemap
+
+rss-description: RSS feed for my latest notes.
+
+social-network-links:
+  github: duhrer
+  youtube: "@TonyInAmsterdam"
+  bluesky: duhrer.bsky.social
+  linkedin: atkinstony
+  rss: true
+
+share-links-active:
+  twitter: true
+  facebook: true
+  linkedin: true
+  bluesky: true
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      comments: true
+      social-share: true
+  -
+    scope:
+      path: ""
+    values:
+      layout: "page"

@@ -5,7 +5,7 @@
     1. All unique combinations of 7 keys that form a scale.
     2. All unique variations of sub-combinations, from two keys to 6.
 
-    This will serve as a (hopefully not massive) lookup table for keys.  Here are the base patterns for C (0):
+    This will serve as a (hopefully not massive) lookup table for keys. Here are the base patterns for C (0):
 
     Major (Ionian):
          0,  2,  4,  5,  7,  9, 11
@@ -23,7 +23,7 @@
     achieved in another scale.
 
     Let's assume that we had two allowed patterns based on  arrays of similar letters, ["f", "a", "c", "e"] and
-    ["f", "a", "d", "e"].   We need to ensure that if "f" is the only letter used so far, "a", "c", "d", and "e" are
+    ["f", "a", "d", "e"].  We need to ensure that if "f" is the only letter used so far, "a", "c", "d", and "e" are
     allowed, but that if "f", "a", and "d", are used, only "e" is still allowed.
 
     The lookup table for that example might look something like:
@@ -88,9 +88,9 @@
     ```
 
     Querying for remaining available items in the pattern becomes as simple as examining the level represented by the
-    current items.  For example, `structure[f]` is an object with three sub-elements (meaning that we are checking a
-    partial pattern).  If we use `Object.keys` on `structure[f]`, the keys let us know that "a", "c", "d", and "e" could
-    complete a valid pattern.  (We are assuming that only a letter at a time can be added.)
+    current items. For example, `structure[f]` is an object with three sub-elements (meaning that we are checking a
+    partial pattern). If we use `Object.keys` on `structure[f]`, the keys let us know that "a", "c", "d", and "e" could
+    complete a valid pattern. (We are assuming that only a letter at a time can be added.)
 
     If we test ["f", "a", "c", "e"] (or any variation, such as ["c", "a", "f", "e"]), the return value is simply `true`,
     i.e. we have encountered the end of a complete pattern.

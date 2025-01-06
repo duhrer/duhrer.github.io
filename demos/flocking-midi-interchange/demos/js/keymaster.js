@@ -1,7 +1,7 @@
 (function (fluid) {
     /*
 
-    A router that monitors the "recently" held notes and ensures that play is constrained to a scale.  Supports the
+    A router that monitors the "recently" held notes and ensures that play is constrained to a scale. Supports the
     following scales, adapted from Wikipedia:
 
     https://en.wikipedia.org/wiki/Major_scale
@@ -15,8 +15,8 @@
     # Device Feedback
 
     This instrument is designed with a MIDI-programmable device like the Novation Launchpad or Launchpad Pro in mind.
-    Whenever a note is "held" or released, MIDI messages are sent to highlight the "allowed" notes.  When no notes are
-    held, all pads are lit.  As notes are "held", the number of "allowed" notes decreases until only octave variations
+    Whenever a note is "held" or released, MIDI messages are sent to highlight the "allowed" notes. When no notes are
+    held, all pads are lit. As notes are "held", the number of "allowed" notes decreases until only octave variations
     on the existing "held" notes are possible.
 
  */

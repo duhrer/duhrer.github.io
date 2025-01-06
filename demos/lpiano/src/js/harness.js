@@ -1,7 +1,7 @@
 (function () {
     /*
 
-     A harness to handle passing "noteOn", "noteOff", and "pitchbend" events to a synth.  Designed to work with grades
+     A harness to handle passing "noteOn", "noteOff", and "pitchbend" events to a synth. Designed to work with grades
      that extend `lpiano.synth`, which has the correct named IDs to set the values used here.
 
 

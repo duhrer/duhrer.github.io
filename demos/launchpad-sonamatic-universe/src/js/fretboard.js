@@ -17,7 +17,7 @@
         }
     });
 
-    // Add markings for 3, 5, 7, 9, 12, et cetera on row 0.  Octave markings are distinct from the rest.
+    // Add markings for 3, 5, 7, 9, 12, et cetera on row 0. Octave markings are distinct from the rest.
     lsu.fretboard.uiOutputConnection.redrawFretMarkers = function (that) {
         var fretMarkerOffsets = [3,5,7,9]; // We handle full octaves, i.e. 12 separately.
 

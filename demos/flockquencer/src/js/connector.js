@@ -1,7 +1,7 @@
 /*
 
     A "tap" connector that acts as a proxy for its underlying connection and which issues note, control, etc. events
-    as messages are sent out.  Allows other services to listen for outgoing messages, for example to a Launchpad.
+    as messages are sent out. Allows other services to listen for outgoing messages, for example to a Launchpad.
 
  */
 (function (fluid) {

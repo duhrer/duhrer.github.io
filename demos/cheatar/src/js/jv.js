@@ -21,7 +21,7 @@
 
         0x01 0x00 0x00 0x28 0x06
 
-        This sums to 0x2F, or 47.  128 - 47 = 81.  Or, in hex, 0x80 - 0x2F = 0x51
+        This sums to 0x2F, or 47. 128 - 47 = 81. Or, in hex, 0x80 - 0x2F = 0x51
 
      */
     jv.messageWithChecksum = function (message) {

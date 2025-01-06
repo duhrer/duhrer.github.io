@@ -84,7 +84,7 @@
         that.applier.change(["sequences", sequenceId], sequence);
     };
 
-    // TODO: BPM controls and display.  Sub-modes?  Other display buffer?
+    // TODO: BPM controls and display. Sub-modes?  Other display buffer?
 
     flockquencer.mode.performance.handleNoteInput = function (that, notePayload) {
         var isSequenceControl = fluid.get(that.options.sequenceControlNotes, fluid.get(notePayload, "note"));
@@ -238,7 +238,7 @@
     };
 
     flockquencer.mode.performance.handleModeChange = function (that, newValue, oldValue) {
-        // We've just become the active mode.  Paint our notes.
+        // We've just become the active mode. Paint our notes.
         if (newValue === that.options.mode) {
             flockquencer.mode.performance.paintNotes(that);
         }

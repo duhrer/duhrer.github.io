@@ -1,6 +1,6 @@
 /*
 
- A harness to handle passing "noteOn", "noteOff", and "pitchbend" events to a synth.  Designed to work with grades
+ A harness to handle passing "noteOn", "noteOff", and "pitchbend" events to a synth. Designed to work with grades
  that extend `cheatar`.
 
  */

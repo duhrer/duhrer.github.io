@@ -523,10 +523,10 @@
 
     /**
      *
-     * Calculate how to display all cells by breaking down their position relative to the centre.  Each cell has a
+     * Calculate how to display all cells by breaking down their position relative to the centre. Each cell has a
      * diameter equal to the width height of a grid square. Each cell contributes whatever portion of its energy lies
-     * within a grid square to that square.  The grid is 8 x 8 and the first square is row 0 and column 0. The centre is
-     * between rows 3 and 4 and columns 3 and 4 of the grid.  So, a cell whose x and y value are zero contributes a
+     * within a grid square to that square. The grid is 8 x 8 and the first square is row 0 and column 0. The centre is
+     * between rows 3 and 4 and columns 3 and 4 of the grid. So, a cell whose x and y value are zero contributes a
      * quarter of its energy to each of the four squares surrounding the centre point. A cell that is four or more
      * rows/columns from the centre is completely out of bounds.
      *

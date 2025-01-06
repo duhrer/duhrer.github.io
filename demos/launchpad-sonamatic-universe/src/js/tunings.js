@@ -5,7 +5,7 @@
     fluid.registerNamespace("lsu.tunings");
 
     /*
-        The Launchpad Pro (and Pro MK3) have a "programmer" mode and layout.  The mappings in the
+        The Launchpad Pro (and Pro MK3) have a "programmer" mode and layout. The mappings in the
         `lsu.tunings.launchpadPro` namespace work for both.
      */
     fluid.registerNamespace("lsu.tunings.launchpadPro");

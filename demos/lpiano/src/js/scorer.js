@@ -19,7 +19,7 @@ lpiano.scorer.noteInNoteGroup = function (note, noteGroup) {
     var matches = false;
 
     if (note) {
-        // The incoming note is a MIDI note/pitch.  We must convert it to a vexflow key, ala C/1, D#/2.
+        // The incoming note is a MIDI note/pitch. We must convert it to a vexflow key, ala C/1, D#/2.
         var vexflowKey = lpiano.transforms.pitchToVexflowKey(note);
 
         fluid.each(fluid.makeArray(noteGroup.keys), function (expectedKey) {

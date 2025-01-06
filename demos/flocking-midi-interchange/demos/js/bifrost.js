@@ -1,7 +1,7 @@
 /*
 
     A router that monitors the "held" notes and ensures that only additional notes that would make a chord
-    can be played.  Note that chord detection is limited to minor, major, augmented, diminished, and some 7th chords.
+    can be played. Note that chord detection is limited to minor, major, augmented, diminished, and some 7th chords.
 
     When each note is played:
 
@@ -12,32 +12,32 @@
 
     Note that because of "deoctavising", you are always allowed to play any "held" note in another octave.
 
-    Each chord can be shifted up to 11 places higher, and notes "wrap" between octaves.  As an example, here are the
+    Each chord can be shifted up to 11 places higher, and notes "wrap" between octaves. As an example, here are the
     twelve variations on a major chord (in this diagram the first note is always the root):
 
-    1.  0,  4,  7
-    2.  1,  5,  8
-    3.  2,  6,  9
-    4.  3,  7, 10
-    5.  4,  8, 11
-    6.  5,  9,  0
-    7.  6, 10,  1
-    8.  7, 11,  2
-    9.  8,  0,  3
+    1. 0,  4,  7
+    2. 1,  5,  8
+    3. 2,  6,  9
+    4. 3,  7, 10
+    5. 4,  8, 11
+    6. 5,  9,  0
+    7. 6, 10,  1
+    8. 7, 11,  2
+    9. 8,  0,  3
     10. 9,  1,  4
     11. 10, 2,  5
     12. 11, 3,  6
 
     If only major chords were allowed and you pressed the 4th note, you might be trying for variation #1, #5, or #10,
-    and notes 0, 1, 7, 8, 9, and 11 would be allowed.  Once you pressed the 9th note, only the 1st note would be
+    and notes 0, 1, 7, 8, 9, and 11 would be allowed. Once you pressed the 9th note, only the 1st note would be
     allowed.
 
     # Device Feedback
 
     This instrument is designed with a MIDI-programmable device like the Novation Launchpad or Launchpad Pro in mind.
-    Whenever a note is "held" or released, MIDI messages are sent to highlight the "allowed" notes.  When no notes are
-    held, all pads are lit.  As notes are "held", the number of "allowed" notes decreases until only octave variations
-    on the existing "held" notes are possible.  With the current range of chords, this means that you will only be able
+    Whenever a note is "held" or released, MIDI messages are sent to highlight the "allowed" notes. When no notes are
+    held, all pads are lit. As notes are "held", the number of "allowed" notes decreases until only octave variations
+    on the existing "held" notes are possible. With the current range of chords, this means that you will only be able
     to hit at most four distinct (non octave shifted) notes before you are limited to octave variations on existing
     notes.
 
@@ -90,7 +90,7 @@
 
     /**
      *
-     * Calculate the distinct offsets for an array chords.  Used to display the allowed notes.
+     * Calculate the distinct offsets for an array chords. Used to display the allowed notes.
      *
      * @param {Array<Array<Number>>} chords - An array of chords, which are themselves arrays of notes.
      * @return {Array<Number>} - The distinct "offsets" (modulo 12).
@@ -243,7 +243,7 @@
         var offsetsAsArray = flock.midi.interchange.demos.bifrost.noteMapToOffsets(that.activeNotes);
         that.activeOffsets = fluid.arrayToHash(offsetsAsArray);
 
-        // Generate an updated list of allowed chords.  For now, seems like we have to do a full pass to bring material back.
+        // Generate an updated list of allowed chords. For now, seems like we have to do a full pass to bring material back.
         var allowedChords = flock.midi.interchange.demos.bifrost.findChordsWithNotes(flock.midi.interchange.demos.chordinator.allChords, offsetsAsArray);
         that.allowedChords = allowedChords;
 
@@ -276,7 +276,7 @@
     };
 
     // Although this grade has a lot in common with the ODA loom and transforming router, it is currently separate
-    // because many of its checks prevent messages from being transported.  Need to come up with a pattern for this,
+    // because many of its checks prevent messages from being transported. Need to come up with a pattern for this,
     // perhaps updating the transforming router grade to filter notes that transform to `false`, and also a means of
     // handling "asymmetric" UI and note outputs that need different transforms.
     fluid.defaults("flock.midi.interchange.demos.bifrost", {

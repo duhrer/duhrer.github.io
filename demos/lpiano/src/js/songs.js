@@ -1,4 +1,4 @@
-// Sample songs in VexFlow format, for use with the "learning" modes.  The format used is designed to be used as 
+// Sample songs in VexFlow format, for use with the "learning" modes. The format used is designed to be used as 
 // either the "expectedNotes" value in a "scorer", or as the "notes" in a vexflow "stave".
 "use strict";
 var fluid = fluid || require("infusion");

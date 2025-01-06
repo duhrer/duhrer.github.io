@@ -88,7 +88,7 @@ export function addScanLines() :void {
 
 /*
 
-  Left in as a reference.  Pitifully slow, 7-9 FPS with this approach.
+  Left in as a reference. Pitifully slow, 7-9 FPS with this approach.
 
   All attempts to store and shift part of the data in an array result in
   "index out of bounds" errors.
@@ -102,7 +102,7 @@ let verticalHoldDelta: i32 = -15;
 
 // Apply a simulated shift in vertical hold a single column at a time.
 // Went down that road because of the issues creating arrays to temporarily
-// hold one piece of the image that will be overwritten.  Laughably slow.
+// hold one piece of the image that will be overwritten. Laughably slow.
 export function applyVerticalHold () :void {
   verticalOffset = (height + verticalOffset + verticalHoldDelta) % height;
 
@@ -199,7 +199,7 @@ export function combineWithMirroredSelf () :void {
   }
 }
 
-// TODO: function to combine an image with its "mirror".  Look at each pixel
+// TODO: function to combine an image with its "mirror". Look at each pixel
 // and its "partner" at the other end of the row.
 
 // TODO: Combine both to make a "kaleidescope".

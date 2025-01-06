@@ -1,12 +1,12 @@
 /*
 
     Not sure this is at all viable, what I really want is something that recognisably plays patterns (such as those on
-    the Roland MC-303 IN REVERSE).  One approach would be to use song pointer positions, i.e. every beat go backwards
-    and then play a single note from the current position.  My first question is, what happens when we go to a very high
-    song position in a song that has very few steps.  Is it like deep space, just silence?
+    the Roland MC-303 IN REVERSE). One approach would be to use song pointer positions, i.e. every beat go backwards
+    and then play a single note from the current position. My first question is, what happens when we go to a very high
+    song position in a song that has very few steps. Is it like deep space, just silence?
 
-    One strategy for playing backwards is to move backwards by two steps every step.  Does that result in a note being
-    played?  Try it.  If so, then you just need to send the clock messages for each step, and increase the rate.
+    One strategy for playing backwards is to move backwards by two steps every step. Does that result in a note being
+    played?  Try it. If so, then you just need to send the clock messages for each step, and increase the rate.
 
     What happens for positive time?  Move the beat forward by one and send a clock message.
 

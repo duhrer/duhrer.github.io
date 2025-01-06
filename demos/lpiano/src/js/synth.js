@@ -9,7 +9,7 @@
 var fluid = fluid || require("infusion");
 fluid.registerNamespace("lpiano.synth");
 
-// Set a value in all voices.  Used with the mod wheel and pitchbend, which affect all playing voices.
+// Set a value in all voices. Used with the mod wheel and pitchbend, which affect all playing voices.
 lpiano.synth.set = function (that, args) {
     var nodes = that.nodeList.nodes;
     var results = [];

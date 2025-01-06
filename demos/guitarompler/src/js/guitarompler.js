@@ -1,7 +1,7 @@
 /*
 
-    A sample-based synthesizer based on multiple recordings of an acoustic guitarlele.  Note-handling is divided into "families" around a particular sample, with scaling hints for each
-    note ("family member").  Each family contains at least 12 notes: six steps below the unscaled recording, the unscaled recording itself, and five steps above.  The relative scaling is as
+    A sample-based synthesizer based on multiple recordings of an acoustic guitarlele. Note-handling is divided into "families" around a particular sample, with scaling hints for each
+    note ("family member"). Each family contains at least 12 notes: six steps below the unscaled recording, the unscaled recording itself, and five steps above. The relative scaling is as
     follows:
 
 
@@ -159,7 +159,7 @@
 
         var velocity = midiMessage.velocity | midiMessage.pressure;
 
-        // Vary the volume of playing notes so that we can support aftertouch.  Only stop the note if this isn't aftertouch.`
+        // Vary the volume of playing notes so that we can support aftertouch. Only stop the note if this isn't aftertouch.`
         if (that.isPlaying && velocity > 0) {
             that.gainNode.gain.value = guitarompler.note.gainFromVelocity(velocity);
         }

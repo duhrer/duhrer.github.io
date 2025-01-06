@@ -19,7 +19,7 @@
     };
 
     flock.midi.interchange.demos.lpg.adjustPitch = function (that, controlMessage) {
-        // If the value is zero, the control is being released.  We act on "button down" instead.
+        // If the value is zero, the control is being released. We act on "button down" instead.
         if (controlMessage.value) {
             var newPitchOffset = that.pitchOffset;
             // UP = 91
@@ -39,8 +39,8 @@
                 newPitchOffset++;
             }
 
-            // The base tuning has a range from 52-95.  MIDI only supports 0-127, so we have to make sure
-            // that we don't end up with "out of bounds" notes.  Our pitch offset can only go from -52 to +32
+            // The base tuning has a range from 52-95. MIDI only supports 0-127, so we have to make sure
+            // that we don't end up with "out of bounds" notes. Our pitch offset can only go from -52 to +32
 
             // Limit the lower end of the range
             newPitchOffset = Math.max(-52, newPitchOffset);
