@@ -277,7 +277,7 @@
      *
      * @param {Object} that - An `lsu.router.colour` grade or anything else whose model has colourScheme and brightness.
      * @param {String} channel - The colour channel, i.e. "r", "g", or "b".
-     * @param {Number} saturation - The desired "saturation" from 0 to 1.  Will be scaled down for each channel.
+     * @param {Number} saturation - The desired "saturation" from 0 to 1. Will be scaled down for each channel.
      * @return {number} - The scaled saturation for the given channel, from 0 to 1.
      */
     lsu.router.colour.calculateSingleColor = function (that, channel, saturation) {

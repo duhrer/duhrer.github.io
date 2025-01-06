@@ -345,8 +345,8 @@
         // TODO: Request the device information up front and only paint if it's a launchpad.
 
         /*
-            There are a few control commands that you can send on channel 0 with a "number" of zero.  For example,
-            Here's the command to update the display buffer.  The bits of the "value" are used to control a range of
+            There are a few control commands that you can send on channel 0 with a "number" of zero. For example,
+            Here's the command to update the display buffer. The bits of the "value" are used to control a range of
             parameters:
 
             0. always 0

@@ -29,7 +29,7 @@
 
     /*
 
-       Look at the list of "held" notes and generate a colour scheme.  The Launchpad Pro's programmer layout is
+       Look at the list of "held" notes and generate a colour scheme. The Launchpad Pro's programmer layout is
        as follows:
 
         81 82 83 84 85 86 87 88

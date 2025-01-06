@@ -34,7 +34,7 @@
                 }
                 that.rootE   = rootE;
 
-                // Only the active chord is tracked for changes, pass that along now.  Use the root of the key.
+                // Only the active chord is tracked for changes, pass that along now. Use the root of the key.
                 var variation = that.options.chordVariations[that.chordVariation];
                 var chord = note + variation;
                 that.applier.change("key", chord);

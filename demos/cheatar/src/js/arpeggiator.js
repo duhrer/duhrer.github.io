@@ -22,7 +22,7 @@
         that.applier.change(["playingNotes", midiNote], true);
         that.applier.change("playingChord", playingChord);
 
-        // Adjust the strum duration so that harder strums are played more quickly.  The hardest note is played 50%
+        // Adjust the strum duration so that harder strums are played more quickly. The hardest note is played 50%
         // faster, the softest is played 50% slower.
         var velocityAdjust = ((63.5 - payload.velocity) / 127) * that.model.strumDuration;
         var msBetweenStrings = (that.model.strumDuration + velocityAdjust) / (chordPattern.length + 1);
@@ -137,7 +137,7 @@
         that.applier.change("keyChords", chordMap);
     };
 
-    // TODO:  Get rid of the "none" pattern in favor of playing notes directly when arpeggiation is disabled.  Also, explicitly clobber any notes playing at the moment when arpeggiation is toggled.
+    // TODO:  Get rid of the "none" pattern in favor of playing notes directly when arpeggiation is disabled. Also, explicitly clobber any notes playing at the moment when arpeggiation is toggled.
     cheatar.arpeggiator.disableArpeggiation = function (that) {
         cheatar.arpeggiator.clearAllTimeouts(that);
         if (that.model.arpeggiation) {

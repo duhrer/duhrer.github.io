@@ -317,7 +317,7 @@
                     that.applier.change("colourSchemeName", colourSchemeName);
                 }
             }
-            // TODO: We can only implement this if we figure out how to handle the notes that are already playing.  Silence all?
+            // TODO: We can only implement this if we figure out how to handle the notes that are already playing. Silence all?
             // Probably needs to be a model variable, then.
             // // Increase pitch shift on upward arrow.
             // else if (midiMessage.number === 91) {
@@ -508,7 +508,7 @@
                 velocity: colourScheme.velocity
             };
 
-            // TODO: This seems wrong, and is clobbered by paintUI anyway.  Try removing.
+            // TODO: This seems wrong, and is clobbered by paintUI anyway. Try removing.
             // that.sendToUi(impactLaunchpadRelativeMessage);
 
             var impactCommonRelativedMessage = fluid.model.transformWithRules(impactLaunchpadRelativeMessage, flock.midi.interchange.tunings.launchpadPro.common);

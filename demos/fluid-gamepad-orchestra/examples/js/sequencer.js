@@ -50,7 +50,7 @@
         that.container.toggleClass("fluid-gamepad-sequence-step--isActiveStep", isActiveStep);
     };
 
-    // onscreen display for per-sequencer gamepad.  Varies enough from fluid.gamepad.onscreen to use its own setup.
+    // onscreen display for per-sequencer gamepad. Varies enough from fluid.gamepad.onscreen to use its own setup.
     fluid.defaults("fluid.gamepad.orchestra.examples.sequencer.gamepad", {
         gradeNames: ["fluid.gamepad", "fluid.gamepad.templateRenderer"],
         markup: {

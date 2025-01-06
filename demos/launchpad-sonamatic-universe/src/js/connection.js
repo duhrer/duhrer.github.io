@@ -165,7 +165,7 @@
                 0, 0x20, 0x29, 0x02, 0x10,
                 // "RGB Grid Sysex" command
                 0xF,
-                // 0: all pads, 1: square drum pads only.  We use "all pads" to match the behaviour of the pro MK3.
+                // 0: all pads, 1: square drum pads only. We use "all pads" to match the behaviour of the pro MK3.
                 0
             ],
             launchpadPro3: [

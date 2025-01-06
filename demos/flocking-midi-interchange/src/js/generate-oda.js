@@ -51,7 +51,7 @@
     a stroke of 4px is 304px wide (2 pixels of the stroke stick out on each of the left and right sides).
 
     As shown above, the outermost object is itself the XML tag, and each sub property name is the name of the tag that
-    should contain its content.  Attributes are key: value pairs underneath each object. Here is a quick example that
+    should contain its content. Attributes are key: value pairs underneath each object. Here is a quick example that
     covers the syntax for repeated elements and textual content:
 
     {
@@ -130,7 +130,7 @@ fluid.registerNamespace("flock.midi.interchange.svgGen.singleRow");
 flock.midi.interchange.svgGen.singleRow.getXmlAsJson = function (that) {
     var svgAsJson = fluid.merge({}, that.options.baseXmlAsJson);
     // TODO: Figure out how to work this for things like the single pixel ODA that need to have a larger
-    // document height.  Optional property?
+    // document height. Optional property?
     var viewBoxHeight = (that.options.cellWidth + (that.options.strokeWidth / 2));
     var viewBoxWidth = 125 * ( viewBoxHeight + that.options.marginWidth);
     svgAsJson.svg.viewBox = [0, 0, viewBoxWidth, viewBoxHeight].join(" ");

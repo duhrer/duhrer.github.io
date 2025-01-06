@@ -47,7 +47,7 @@
     }
 
     Aftertouch messages are stored under an "aftertouch" element, which has a "channel" and "poly" element for channel
-    and polyphonic aftertouch messages respectively.  The "channel" key stores the "pressure" value.  The "poly" key
+    and polyphonic aftertouch messages respectively. The "channel" key stores the "pressure" value. The "poly" key
     stores individual polyphonic aftertouch messages using the "note" as the key and the "pressure" as the value, as in:
 
     model: {

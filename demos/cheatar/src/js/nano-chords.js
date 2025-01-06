@@ -1,7 +1,7 @@
 /*
 
-    A series of major, minor, and 7th chords expressed in terms of the fret held on each string.  -1 indicates that a
-    string is not played, 0 indicates that the open string is played.  A positive number indicates the fret that is held.
+    A series of major, minor, and 7th chords expressed in terms of the fret held on each string. -1 indicates that a
+    string is not played, 0 indicates that the open string is played. A positive number indicates the fret that is held.
 
     These can be used both to generate chord images onscreen and to set up the nano cheatar to play the correct pitch
     for each string.
