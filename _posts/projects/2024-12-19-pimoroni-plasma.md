@@ -23,8 +23,6 @@ low. The Plasma 2350 unit includes a voltage converter to ensure that the lights
 can draw the full 5 Volts they require. It also includes a ten metre string of
 individually addressable lights, each in its own star diffuser.
 
-## The Code
-
 I adapted some previous code I had used to create a lightshow. The string of
 lights is treated as a ring, and has three bands of red, green, and blue lights.
 Each band displays its colour at its strongest in the centre, and fades the
@@ -42,7 +40,16 @@ The bands move in the same direction, and at different speeds, so the amount
 of overlap changes, occasionally resulting in areas where three colours overlap
 (white) and unlit areas.
 
-A key thing I learned here was how to compile for the RP2350 chipset instead of
+I knocked up a quick CodePen to demonstrate the rough behavior (and also give myself an excuse to learn about CSS variables and improve my animation skillz):
+
+<p class="codepen" data-height="300" data-theme-id="dark" data-default-tab="result" data-slug-hash="pvzpLWm" data-pen-title="CSS / HTML Rainbow light simulator." data-user="duhrer" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+  <span>See the Pen <a href="https://codepen.io/duhrer/pen/pvzpLWm">
+  CSS / HTML Rainbow light simulator.</a> by Tony Atkins (<a href="https://codepen.io/duhrer">@duhrer</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://public.codepenassets.com/embed/index.js"></script>
+
+Another key thing I learned here was how to compile for the RP2350 chipset instead of
 the RP2040 units I've been using up until now. Most of my projects expect you to
 enter a `build` directory and generate the project build system using a command
 like:
