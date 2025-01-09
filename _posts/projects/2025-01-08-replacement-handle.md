@@ -57,6 +57,7 @@ We discussed strategies, such as:
 2. Printing with the piece rotated so that the tension would be applied across
    rather than along the layer lines.
 3. Making much thicker "arms", as there is certainly room for them.
+4. Making the "arms" separate pieces that could be bolted into the main handle.
 
 In addition, we noticed that the fit of the handle was too snug, and failed to
 account for two notches that hold the original piece in place.
