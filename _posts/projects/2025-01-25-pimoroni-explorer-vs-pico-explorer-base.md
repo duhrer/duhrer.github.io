@@ -20,7 +20,7 @@ a while ago, and I really like it for a few key things:
 
 1. Breadboarding initial ideas before breaking out a soldering iron.
 2. Debugging with a [picoprobe](https://www.raspberrypi.com/products/debug-probe/)
-   (there are female pins to plug the debugger into).
+   (there are female headers to plug the debugger into).
 3. It has a built in display and buttons.
 4. Pimoroni provides [a good library for developing for the Pico Explorer Base using c++](https://github.com/pimoroni/pimoroni-pico).
 
