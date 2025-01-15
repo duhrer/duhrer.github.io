@@ -12,7 +12,7 @@ central question, and strives to answer it. The question could be phrased
 as "What motivates God?" or "What is the nature of the universe that we
 experience and the creative force that caused it to come into being?".
 
-<!-- more -->
+<!--more-->
 
 > Midway upon the journey of our life
 > I found myself within a forest dark,

@@ -12,7 +12,7 @@ One of the key things I like about 3D printing is that you can make replacement
 parts at home. My latest 3D modelling project is a replacement handle for a
 [Really Useful Storage box](https://www.reallyusefulstorageboxes.co.uk/).
 
-<!-- more -->
+<!--more-->
 
 I ended up with one without a second handle, which mostly works fine, but
 occassionally springs open and dumps its contents on my head while I'm getting

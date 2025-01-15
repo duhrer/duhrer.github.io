@@ -23,7 +23,7 @@ Says".
 What if someone had the power to make other people do what they wanted, if free
 will came with an asterisk?
 
-<!-- more -->
+<!--more-->
 
 This is entertaining source material that's mined over and over again in comic
 books (here are two examples: <a
