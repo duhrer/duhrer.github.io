@@ -9,7 +9,7 @@ tags:
 ---
 
 After [yesterday's write
-up](2025-01-15-pimoroni-explorer-vs-pico-explorer-base), I wanted to try the
+up](/2025-01-15-pimoroni-explorer-vs-pico-explorer-base), I wanted to try the
 older Pico Explorer Base with newer RP2350 units, and it was a real success.
 
 <!--more-->
