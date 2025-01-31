@@ -175,7 +175,7 @@ configuring your device. On the Android Wear side, I've configured my own
 "tiles", which appear when you swipe right from the watch face (you can have
 multiple tiles). I've heard there are watch faces that act as a launcher to give
 you the option to change what happens when you swipe in other directions, but
-haven't tried them yet. Like Android, Android Wear also supports the ability to
+haven't tried them yet. Like Android, Android Wear supports the ability to
 disable built-in software, and I definitely use this to turn off stuff I don't
 use like voice memos.
 
