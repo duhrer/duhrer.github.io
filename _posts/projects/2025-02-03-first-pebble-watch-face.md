@@ -95,9 +95,9 @@ method](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2
 which helpfully supports a rotation, so I could just treat 12 o'clock like zero
 and make the rest of the math easier.  The arc should basically be 360 degrees
 times the percentage of the minute that has elapsed.  In radians, that's
-(Math.PI * 2 * seconds / 60).  You need to start and end at the centre point,
+`(Math.PI * 2 * seconds / 60)`.  You need to start and end at the centre point,
 so that you end up with more of a "cut pie" shape and less of a "deflated
-baloon".
+balloon".
 
 ## Adapting the Code For The Pebble
 
