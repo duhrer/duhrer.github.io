@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 
+title: Secondhand Pebble
 date: '2025-01-20'
 
 type: posts
@@ -123,7 +123,7 @@ on the thing, my one concern was whether it could scroll and display something
 like a second hand properly, and it can.
 
 <video width="730" loop controls alt="A demonstration of the screen and an animated watch face.">
-<source src="/assets/movies/20250131-mario.mp4">
+<source src="/assets/movies/2025-01-31-mario.mp4">
 </video>
 
 As mentioned, the display does have a backlight, which is not motion activated.
