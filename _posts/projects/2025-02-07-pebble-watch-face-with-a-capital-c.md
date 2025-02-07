@@ -41,6 +41,8 @@ it using primitives.  Here's a snippet of code:
   layer_add_child(window_layer, cutpie_layer);
 
   layer_mark_dirty(cutpie_layer);
+
+  tick_timer_service_subscribe(SECOND_UNIT, tick_handler);
 ```
 
 The "cut pie" in my case is the wedge of inverted colour that represents the
@@ -48,11 +50,15 @@ seconds that have elapsed in the current minute.  The `update_pie` function has
 access to [the graphical
 context](https://developer.rebble.io/developer.pebble.com/docs/c/Graphics/Graphics_Context/index.html),
 which is probably what they used to imitate the HTML Canvas in Rocky.js.
-Thankfully, you can access a few more functions on the C side.
+Thankfully, you can access a few more functions on the C side.  The `update_pie`
+function is called whenever the layer is marked as "dirty", which I do as part
+of the window load to ensure that something is drawn on startup.  I also
+registered a `tick_handler` function that flags the layer as "dirty" every
+second (since I'm displaying a second hand and need to update that often).
 
 For the text, I started out using text layers, but wasn't overly happy with the
 compositing options and also didn't want to have to import/convert a large
-enough font to fille the screen.  I figured if I made my own images, I would
+enough font to file the screen.  I figured if I made my own images, I would
 [have more options for compositing
 them](https://developer.rebble.io/developer.pebble.com/docs/c/Graphics/Graphics_Types/index.html#GCompOp).
 
