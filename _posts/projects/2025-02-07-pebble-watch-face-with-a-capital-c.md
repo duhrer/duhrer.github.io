@@ -58,7 +58,7 @@ second (since I'm displaying a second hand and need to update that often).
 
 For the text, I started out using text layers, but wasn't overly happy with the
 compositing options and also didn't want to have to import/convert a large
-enough font to file the screen.  I figured if I made my own images, I would
+enough font to fill the screen.  I figured if I made my own images, I would
 [have more options for compositing
 them](https://developer.rebble.io/developer.pebble.com/docs/c/Graphics/Graphics_Types/index.html#GCompOp).
 
