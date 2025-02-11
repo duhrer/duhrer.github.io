@@ -33,21 +33,22 @@ a new, less janky version, this time in C:
 Although that video doesn't show it, there was a key problem. The second hand
 should invert part of a digit as it passes through this (in the video, you can
 see how cleanly the original handles this). The old version drew everything in
-layers, so the second hand content looked like it was partially erasing a letter
-until it got halfway through it, and then the letter would invert. It was
-readable, but jerky.
+layers, so the second hand looked like it was partially erasing a letter until
+it got halfway through it, and then the letter would invert. It was readable,
+but jerky.
 
 For this version, I rewrote my code to use a [frame
 buffer](https://developer.rebble.io/developer.pebble.com/guides/graphics-and-animations/framebuffer-graphics/index.html)
 instead of [drawing
-primatives](https://developer.rebble.io/developer.pebble.com/docs/c/Graphics/index.html)
+primitives](https://developer.rebble.io/developer.pebble.com/docs/c/Graphics/index.html)
 in layers.
 
 ## The Cotangent of Darkness
 
-With a frame buffer, they suggest reading and processing one line of the image
-at a time. To do this, I would need to come up with an understanding of where
-the `x` position of the second hand was on each row (`y` position).
+With a frame buffer, the Pebble SDK documentation suggests reading and
+processing one line of the image at a time. To do this, I would need to come up
+with an understanding of where the `x` position of the second hand was on each
+row (`y` position).
 
 Simple trigonometric functions are very good for things like this, as the `x`
 and `y` axes are already two bits of a right triangle. If you were just drawing
@@ -65,7 +66,7 @@ points (where the cotangent is either `0/1`, or worse, `1/0`). In any case, as I
 realised I only needed a total of 60 values, so I ended up making a lookup table
 with safe (i.e. zeroed) values for the cardinal points.
 
-With this table, I could determine how far the "second hand" was from the
+With this table, I could determine how far the second hand was from the
 midpoint of the watch face in each "row", and choose whether to "invert" the
 colour in each pixel depending on whether the pixel is "inside" or "outside" of
 the shape the second hand leaves behind it.
