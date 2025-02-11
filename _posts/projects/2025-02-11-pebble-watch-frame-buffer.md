@@ -31,7 +31,7 @@ a new, less janky version, this time in C:
 </video>
 
 Although that video doesn't show it, there was a key problem. The second hand
-should invert part of a digit as it passes through this (in the video, you can
+should invert part of a digit as it passes through it (in the video, you can
 see how cleanly the original handles this). The old version drew everything in
 layers, so the second hand looked like it was partially erasing a letter until
 it got halfway through it, and then the letter would invert. It was readable,
