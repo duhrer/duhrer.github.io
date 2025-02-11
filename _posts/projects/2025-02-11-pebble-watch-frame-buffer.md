@@ -63,7 +63,7 @@ need something that can provide the `x` value for a given `y` value, i.e. the
 I tried using C's `math.h` directly for this, but wasn't successful.  It may
 have been down to the wild values you get as you approach each of the cardinal
 points (where the cotangent is either `0/1`, or worse, `1/0`). In any case, as I
-realised I only needed a total of 60 values, so I ended up making a lookup table
+realised I only needed a total of 60 values, I ended up making a lookup table
 with safe (i.e. zeroed) values for the cardinal points.
 
 With this table, I could determine how far the second hand was from the
@@ -130,8 +130,8 @@ Next week I'll be taking a break for my son's school holidays, so I may feel
 like doing something totally different when I get back.
 
 I mean, I really have enjoyed developing for the Pebble.  It's a lightweight
-platform, with a few abstractions ((check out their blog if you're
-curious)[https://ericmigi.com/blog/how-to-help-build-open-source-pebble-software]).
+platform, with a few abstractions ([check out their blog if you're
+curious](https://ericmigi.com/blog/how-to-help-build-open-source-pebble-software)).
 The key for me is that they leave enough low-level access that it doesn't feel
 like I'm stepping too far away from the Pico, I feel like I can apply what I'm
 learning there.   For example, I could see adapting the drawing logic from this
