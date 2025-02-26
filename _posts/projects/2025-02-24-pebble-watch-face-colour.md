@@ -158,7 +158,7 @@ backlight (which I do a lot at night):
 
 If I'm going to keep going with this, first of all I need to figure out if there
 are any options to improve the contrast for the colours. Perhaps I'll make a
-quick color swatch example just to confirm that my layering or my inversion
+quick colour swatch example just to confirm that my layering or my inversion
 algorithm isn't somehow watering down the colours.
 
 I also really don't like the look of the custom font, it's just too small. I
