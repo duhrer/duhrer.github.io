@@ -129,7 +129,7 @@ adjusted the alignment to account for the smaller size, I was able to move on to
 adding support for colour.
 
 As I'm inverting rather than replacing colour, I need to use colours that are
-each other's true inverse in the (A)RGB space.  As there are three channels and
+each other's true inverse in the (A)RGB space. As there are three channels and
 then "all channels", that gives us four possibilities with one or more colour
 channels at maximum intensity:
 
@@ -144,7 +144,7 @@ So, the colours look fine on the emulator:
 
 ![Colour, in the emulator](/assets/img/2025-02-26-emulator.png)
 
-Unfortunately, on a real device, the colours are a lot more washed out.  Here's
+Unfortunately, on a real device, the colours are a lot more washed out. Here's
 a shot without the backlight:
 
 ![Colour, on the watch, without backlight.](/assets/img/2025-02-26-watch-without-backlight.jpg)
@@ -157,11 +157,11 @@ backlight (which I do a lot at night):
 ## The Next Refuge of a Scoundrel
 
 If I'm going to keep going with this, first of all I need to figure out if there
-are any options to improve the contrast for the colours.  Perhaps I'll make a
+are any options to improve the contrast for the colours. Perhaps I'll make a
 quick color swatch example just to confirm that my layering or my inversion
 algorithm isn't somehow watering down the colours.
 
-I also really don't like the look of the custom font, it's just too small.  I
+I also really don't like the look of the custom font, it's just too small. I
 have a backup plan, which is to use the existing bitmaps a little differently.
 In the previous verson, I was loading 20 bitmaps (10 black, 10 white), and using
 the Pebble C SDK drawing functions to draw whichever was required for the
@@ -175,4 +175,8 @@ It looks like I can easily [read each line of data in a
 bitmap](https://developer.rebble.io/developer.pebble.com/docs/c/Graphics/Graphics_Types/index.html#GBitmapDataRowInfo),
 which lines up well with [working with a frame buffer](/2025-02-11-pebble-watch-frame-buffer/).
 
-We'll see whether I feel like going that far.  Stay tuned for whatever's next.
+We'll see whether I feel like going that far. If you're curious about the code
+for this effort, I checked the work in progress into [a branch in my GitHub
+repository](https://github.com/duhrer/pebble-vertin-c/tree/2025-02-26-coloured-fonts).
+
+Stay tuned for whatever's next.
