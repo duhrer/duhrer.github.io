@@ -79,8 +79,9 @@ limit to just digits.
 
 Their example doesn't really make it clear how much regex they allow, and their
 schema only indicates that they accept a `string`. Their examples make it look
-like a regexp in square braces to match a single character, i.e. `[0-9]`, which
-seemed to work. Here's the updated snippet:
+like you should use square braces to indicate what should match a single
+character, which in our case is just the digits, i.e. `[0-9]`.  This seemed to
+work. Here's the updated snippet:
 
 ```
     "resources": {
