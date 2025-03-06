@@ -41,7 +41,7 @@ and spent some time sketching.  Here's the rough idea:
 ![A mockup of Sisyphus journey each minute](/assets/img/2025-03-06-progression-mockup.png)
 
 The mountain is just two copies of the same loopable image that act as the
-second hand, moving from left to right across the screen.  The circle represents
+second hand, moving from right to left across the screen.  The circle represents
 the boulder, and moves up or down so that it appears to rest on the right part
 of the mountain.
 
