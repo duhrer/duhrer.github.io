@@ -40,9 +40,10 @@ and spent some time sketching.  Here's the rough idea:
 
 ![A mockup of Sisyphus journey each minute](/assets/img/2025-03-06-progression-mockup.png)
 
-The mountain is just two copies of the same loopable image, that act as the
-second hand.  The circle represents the boulder, and moves up or down so that it
-appears to rest on the right part of the mountain.
+The mountain is just two copies of the same loopable image that act as the
+second hand, moving from left to right across the screen.  The circle represents
+the boulder, and moves up or down so that it appears to rest on the right part
+of the mountain.
 
 I liked the idea well enough to break it down into individual SVGS that match
 screen size I had in mind, and then tweaked them to meet the requirements (no
@@ -58,8 +59,8 @@ the Pebble uses.
 
 For the project skeleton, I finally tried the [`rebbletool` project
 ](https://github.com/richinfante/rebbletool).  It's a fork of the original
-`pebbletool` development tool, which lets you manage the SDKs installed and also
-installs the `pebble` tool you use to build and test your work.
+`pebbletool`, which lets you manage the SDKs installed and also installs the
+`pebble` tool you use to build and test your work.
 
 Unlike the old toolset, `rebbletool` has been updated to work with Python 3 and
 other modern dependencies, so you don't need to use a VM.  I can use this to
