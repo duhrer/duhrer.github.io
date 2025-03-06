@@ -64,7 +64,7 @@ For the project skeleton, I finally tried the [`rebbletool` project
 
 Unlike the old toolset, `rebbletool` has been updated to work with Python 3 and
 other modern dependencies, so you don't need to use a VM.  I can use this to
-create projects, build project, and install them on my watch.
+create, build, and install projects on my watch.
 
 Unfortunately the emulator doesn't work for me, I'll still need to use the VM
 for that. However, since I can use my watch to test things, I can stay in my
