@@ -22,22 +22,32 @@ One thing I haven't tried yet with the Pebble SDK is the support for [Vector
 images and
 animations](https://developer.rebble.io/developer.pebble.com/tutorials/advanced/vector-animations/index.html).  Now I just needed an idea.
 
-I usually start building ideas for a new project by throwing out my thought and then searching for "prior art" to see if anyone has
-already done what I have in mind.
+I usually start testing my ideas for a new project by searching for "prior art",
+to see if anyone has already done what I have in mind.
 
 My first thought was to make a watch face that used animated gears. It's been
-done.  My second thought was something with sand, an hourglass effect.  There
-are already quite a few Pebble watch faces that do this.
+done as well as I could manage.  My second thought was something with sand, an
+hourglass effect.  There are already quite a few Pebble watch faces that do
+this, and my ideas were not spectacular enough to really stand out.
 
-I ended up settling on [the myth of
+My third idea was to make a watch face based on [the myth of
 Sisyphus](https://en.wikipedia.org/wiki/Sisyphus), specifically his punishment
 in the afterlife, rolling a boulder up a mountain, only to have it roll back
-down over and over again.  As I'd be working with SVG images, I happily ran back
-to the arms of Inkscape and spent some time sketching.  Here's the rough idea:
+down over and over again.  No one has done that, so here we go!
+
+As I'd be working with SVG images, I happily ran back to the arms of Inkscape
+and spent some time sketching.  Here's the rough idea:
 
 ![A mockup of Sisyphus journey each minute](/assets/img/2025-03-06-progression-mockup.png)
 
-I created mountains to match the screen size I had in mind, and edited them carefully to meet the requirements (no bezier curves, everything is rounded to the nearest pixel, et cetera).  Now I'm ready to write the thing.
+The mountain is just two copies of the same loopable image, that act as the
+second hand.  The circle represents the boulder, and moves up or down so that it
+appears to rest on the right part of the mountain.
+
+I liked the idea well enough to break it down into individual SVGS that match
+screen size I had in mind, and then tweaked them to meet the requirements (no
+bezier curves, everything is rounded to the nearest pixel, et cetera).  Now I'm
+ready to write the code.
 
 ## Time to Code
 
@@ -46,11 +56,14 @@ some way to make the [PDC
 images](https://developer.rebble.io/developer.pebble.com/guides/app-resources/pdc-format/index.html)
 the Pebble uses.
 
-For the project skeleton, I finally tried the [`rebble`
-tool](https://github.com/richinfante/rebbletool).  It's a fork of the original
-`pebble` development tool updated to work with Python 3 and other modern
-dependencies.  I can use this to create projects, build project, and install
-them on my watch, which is really great.
+For the project skeleton, I finally tried the [`rebbletool` project
+](https://github.com/richinfante/rebbletool).  It's a fork of the original
+`pebbletool` development tool, which lets you manage the SDKs installed and also
+installs the `pebble` tool you use to build and test your work.
+
+Unlike the old toolset, `rebbletool` has been updated to work with Python 3 and
+other modern dependencies, so you don't need to use a VM.  I can use this to
+create projects, build project, and install them on my watch.
 
 Unfortunately the emulator doesn't work for me, I'll still need to use the VM
 for that. However, since I can use my watch to test things, I can stay in my
@@ -87,8 +100,10 @@ take a screen shot of my watch every second for a minute.  I then put them
 together [using
 `ffmpeg`](https://stackoverflow.com/questions/24961127/how-to-create-a-video-from-images-with-ffmpeg).
 
-It was a little fiddly, as I had to keep my phone awake.  But I'm pleased with
-the results, it makes a nice clean timelapse:
+It was a little fiddly, as I had to keep my phone awake, and as it took slightly
+longer than a second between shots.  I'm pleased enough with the results not to
+fire up the VM and use the emulator, as the results make for a nice clean
+timelapse:
 
 <video loop controls alt="The third version of the watch face.">
 <source src="/assets/movies/2025-03-06-sisyphus-timelapse.mp4">
