@@ -46,7 +46,7 @@ the boulder, and moves up or down so that it appears to rest on the right part
 of the mountain.
 
 I liked the idea well enough to break it down into individual SVGS that match
-screen size I had in mind, and then tweaked them to meet the requirements (no
+the screen size of the Pebble and then tweaked them to meet the requirements (no
 bezier curves, everything is rounded to the nearest pixel, et cetera). Now I'm
 ready to write the code.
 
