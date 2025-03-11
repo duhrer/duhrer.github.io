@@ -106,7 +106,7 @@ longer than a second between shots. I'm pleased enough with the results not to
 fire up the VM and use the emulator, as the results make for a nice clean
 timelapse:
 
-<video loop controls alt="The third version of the watch face.">
+<video loop controls alt="A timelapse of the first released version of the watch face.">
 <source src="/assets/movies/2025-03-06-sisyphus-timelapse.mp4">
 </video>
 

@@ -40,7 +40,7 @@ the graphic.
 
 With a suitable [trigonometric
 function](https://en.wikipedia.org/wiki/Trigonometric_functions) (or combination
-thereof), I end up with a set of data points that could be used both to draw the
+thereof), I end up with a set of data points that can be used both to draw the
 mountain onscreen, and also to perfectly position the boulder in relation to the
 mountain.
 
@@ -77,7 +77,7 @@ seconds of the minute. Everything else (the clouds, the sky, the time, and the
 date) updates based on a tick handler, and that can only update every second.
 
 After a lot of rereading the animation examples, I realised that I needed to
-their use `app_timer_register` to schedule each frame. Although I was able to
+use their `app_timer_register` to schedule each frame. Although I was able to
 get to `89 ms` per frame, the effect is still sadly a little choppy, especially
 at the end of the animation.
 
