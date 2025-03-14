@@ -44,7 +44,7 @@ just needed to update each image and:
 4. Interpolate intermediate path segments between points on each curve (you have
    to do this because the PDC format does not support bezier curves, and by default the conversion results in spiky paths, and not the endearingly retro kind).
 
-I then used the [`pdc_tool`](https://github.com/HBehrens/pdc_tool) to generate
+I then used [`pdc_tool`](https://github.com/HBehrens/pdc_tool) to generate
 PDC files from my SVGs. With this done, I was ready replace all of my bitmap
 logic with logic to display the vector images. Given that I could easily refer
 to what I'd done with "Sisyphus", this was pretty straightforward.
