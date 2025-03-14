@@ -155,7 +155,7 @@ of viewpoints and cameras and points in three dimensional space. I spent ages
 making my own graphics editors and versions of old vector games.
 
 I must have missed it, because I keep coming up with ideas for more fun stuff on
-the Pebble. It may also get that I'm getting decent enough at working with C and
+the Pebble. It may also be that I'm getting decent enough at working with C and
 the Pebble C SDK that it's fun and relatively quick to come up with ideas and
 sketch.
 
