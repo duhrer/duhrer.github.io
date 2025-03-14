@@ -143,10 +143,10 @@ I was happy enough with the updated version to [finally publish it to the Rebble
 store](https://apps.rebble.io/en_US/application/67d405d0f4b49d00099ff85d), which
 was after all the goal.
 
-I keep saying I'm ready to move on, and I keep not doing it. I was trying to why
-I've enjoyed working with the Pebble so much. I think it's because it's a
-journey back to a different comfort level for me. The last time I wrote graphics
-code in C, it was in the VGA era, and I was using [Turbo
+I keep saying I'm ready to move on, and I keep not doing it. I was trying to
+figure out why I've enjoyed working with the Pebble so much. I think it's
+because it's a journey back to a different comfort level for me. The last time I
+wrote graphics code in C, it was in the VGA era, and I was using [Turbo
 C](https://en.wikipedia.org/wiki/Turbo_C).
 
 This was just a few years before the first 3D graphics cards were common, and I
