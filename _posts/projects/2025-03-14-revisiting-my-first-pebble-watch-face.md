@@ -34,9 +34,12 @@ face. I tried shifting the position a bit, but with static images, this was not
 all that successful, since each image also contains its own margins, which are
 filled with the background colour.
 
-I decided to refactor to use vector images. The initial image conversion was
-pretty easy, as I kept the original SVG images I used to generate the bitmaps. I
-just needed to update each image and:
+I decided to refactor to use vector images.
+
+## SVG, or Somebody's Very Glad to Goof Around with Inkscape Again
+
+The initial image conversion was pretty easy, as I kept the original SVG images
+I used to generate the bitmaps. I just needed to update each image and:
 
 1. Resize the document to tightly crop the "digit".
 2. Set the background to transparent.
