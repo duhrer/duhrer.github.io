@@ -130,8 +130,8 @@ centre by a few pixels. Here's the end result:
 ![Screenshot from the diorite emulator](/assets/img/2025-03-14-diorite-screenshot.png)
 
 The curved parts of the digits are not quite as smooth as the bitmapped version,
-zeroes in particular look like tiny vampire leeches. However, I found in earlier
-work, it looks much better on a watch than in the emulator.
+zeroes in particular look like tiny vampire leeches. However, as I discovered in
+earlier work, it looks much better on a watch than in the emulator.
 
 In return for a few jagged paths, I get total control over the positioning. I
 also suspect the memory usage is better (sadly the tool they provide to analyse
@@ -155,8 +155,9 @@ of viewpoints and cameras and points in three dimensional space. I spent ages
 making my own graphics editors and versions of old vector games.
 
 I must have missed it, because I keep coming up with ideas for more fun stuff on
-the Pebble. That or I'm getting decent enough at working with the Pebble C SDK
-that it's fun and relatively quick to come up with ideas and sketch.
+the Pebble. It may also get that I'm getting decent enough at working with C and
+the Pebble C SDK that it's fun and relatively quick to come up with ideas and
+sketch.
 
 Case in point, if I don't finally snap out of it, I'm thinking of doing
 something with rotating elements and animation next. Anyway, as always, you can
