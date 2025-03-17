@@ -315,9 +315,8 @@ was able to move the path wherever I wanted and rotate it around its centre.
 
 ## Conclusion
 
-Anyway, all that may not seem like a lot of progress, but I learned a lot, and
-I'm gratified that I have the foundation I need to keep working on the new
-project.
+All that may not seem like a lot of progress, but I learned a lot, and I'm
+gratified that I have the foundation I need to keep working on the new project.
 
 I still need to do a lot of work to prepare the complex SVG images for the real
 watch. Although it was fun making diagrams for the ten points in my "star", I
