@@ -180,8 +180,8 @@ the only things I still have to boot to Windows to do are:
 
 1. Print to my aging [Ricoh
    Printer](https://support.ricoh.com/bb/html/dr_ut_e/re1/model/sp150/sp150.htm)
-2. Watch Apple TV+ content (in my case, movies I've purchased over the
-   years from my Apple TV).
+2. Watch Apple TV+ content (in my case, movies I've purchased over the years
+   from my Apple TV).
 
 This means most of my time is spent in Linux, and it gets more comfortable the
 longer I use it. It "just works" a lot more of the the time than it used to, and
