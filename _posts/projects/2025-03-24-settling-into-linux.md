@@ -29,7 +29,7 @@ driver again. Windows is firmly a necessary evil for me, and I only run it when:
 With OS X and Windows off the list, that just leaves Linux. I've gone through
 phases of running Linux desktops over the years, from the
 [Slackware](http://www.slackware.com/) days in the 90s on. The last time I quit
-for good was circa 2008, after constantly wrestling with multi-monitor support
+"for good" was circa 2008, after constantly wrestling with multi-monitor support
 in SuSE.
 
 Recently, though, I read good things about [Bazzite](https://bazzite.gg/), a
