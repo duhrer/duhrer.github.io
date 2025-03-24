@@ -136,9 +136,9 @@ ask where the bathroom is).
 ## Games (and WINE)
 
 Bazzite has been great for the games I use. I mainly run intentionally low-fi
-games and older games, which is a fine fit for the laptop GPU I have on my
-Framework laptop. However, if I decide to build a gaming machine to play AAA
-games, I would still use Bazzite.
+games and older games, which is a fine fit for the GPU I have on my Framework
+laptop. However, if I decide to build a gaming machine to play AAA games, I
+would still use Bazzite.
 
 There are a bunch of app launchers (Steam, Heroic Launcher, and my current
 favourite, [Lutris](https://lutris.net/)). Between them, you can install an
@@ -165,8 +165,8 @@ MIDI controller, but given how fast WINE starts, this isn't much of a hardship.
 My only early complaint with WINE was the resolution. I have a double-wide
 monitor whose native resolution is `3440 x 1400`. Apps designed for older and
 smaller monitors were incredibly tiny, and it was a pain getting through the
-various tiny dialogs to get to the point where I could finally configure the
-in-app resolution to something acceptable.
+various microscopic dialogs to get to the point where I could finally configure
+the in-app resolution to something acceptable.
 
 The breakthrough for me was learning [how to configure the DPI scaling for
 WINE](https://askubuntu.com/questions/1337156/how-do-i-set-scaling-in-wine).
