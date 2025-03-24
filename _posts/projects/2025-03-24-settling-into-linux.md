@@ -165,8 +165,8 @@ MIDI controller, but given how fast WINE starts, this isn't much of a hardship.
 My only early complaint with WINE was the resolution. I have a double-wide
 monitor whose native resolution is `3440 x 1400`. Apps designed for older and
 smaller monitors were incredibly tiny, and it was a pain getting through the
-various microscopic dialogs to get to the point where I could finally configure
-the in-app resolution to something acceptable.
+various microscopic dialogs to get to the point where I could finally set the
+in-app resolution to something acceptable.
 
 The breakthrough for me was learning [how to configure the DPI scaling for
 WINE](https://askubuntu.com/questions/1337156/how-do-i-set-scaling-in-wine).
