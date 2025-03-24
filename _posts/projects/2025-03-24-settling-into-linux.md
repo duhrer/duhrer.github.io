@@ -20,9 +20,11 @@ or gaming. I spent a long time debating what to replace it with.
 Although I've heard good things, I wasn't ready to upgrade to a post-Intel Mac
 processor. Among other things, I want to be able to run Windows apps on the same
 hardware. However, I also wasn't ready to have a Windows machine as my daily
-driver again. Windows is firmly a necessary evil for me, and I only run it when
-I fix my Mom's computer or figure out why my code doesn't work for a friend on
-Windows.
+driver again. Windows is firmly a necessary evil for me, and I only run it when:
+
+1. I want to play a game that isn't supported elsewhere.
+2. I fix my Mom's computer.
+3. I need to figure out why my code doesn't work for a friend on Windows.
 
 With OS X and Windows off the list, that just leaves Linux. I've gone through
 phases of running Linux desktops over the years, from the
