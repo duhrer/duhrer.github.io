@@ -24,7 +24,7 @@ driver again. Windows is firmly a necessary evil for me, and I only run it when:
 
 1. I want to play a game that isn't supported elsewhere.
 2. I fix my Mom's computer.
-3. I need to figure out why my code doesn't work for a friend on Windows.
+3. I need to figure out why my code doesn't work for a friend running Windows.
 
 With OS X and Windows off the list, that just leaves Linux. I've gone through
 phases of running Linux desktops over the years, from the
