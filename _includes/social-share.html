@@ -10,6 +10,14 @@
 <section id = "social-share-section">
   <span class="sr-only">Share: </span>
 
+  {% if site.share-links-active.bluesky %}
+    <a href="https://bsky.app/intent/compose?text={{"Just reading a post called " | url_encode}}%22{{ page.title | strip_html | url_encode }}%22 on Tony Atkins' blog:%0D%0A{{ page.url | absolute_url | url_encode }}"
+      class="btn btn-social-icon btn-bluesky" title="Share on Bluesky">
+      <span class="fab fa-fw fa-bluesky" aria-hidden="true"></span>
+      <span class="sr-only">Bluesky</span>
+    </a>
+  {% endif %}
+
   {% if site.share-links-active.twitter %}
     <a href="https://twitter.com/intent/tweet?text={{ page.title | strip_html | url_encode }}&url={{ page.url | absolute_url | url_encode }}"
       class="btn btn-social-icon btn-twitter" title="Share on X (Twitter)">

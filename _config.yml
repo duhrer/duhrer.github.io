@@ -20,6 +20,9 @@ navbar-links:
 kramdown:
   input: GFM
 
+avatar: "/assets/img/20250402-avatar.jpeg"
+round-avatar: true
+
 exclude:
   - Gemfile
   - Gemfile.lock
@@ -55,4 +58,5 @@ defaults:
     scope:
       path: ""
     values:
+      show-avatar: false
       layout: "page"
