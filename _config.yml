@@ -20,7 +20,7 @@ navbar-links:
 kramdown:
   input: GFM
 
-avatar: "/assets/img/20250402-avatar.jpeg"
+avatar: "/assets/img/20250403-avatar.jpeg"
 round-avatar: true
 
 exclude:
