@@ -20,8 +20,8 @@ navbar-links:
 kramdown:
   input: GFM
 
-avatar: "/assets/img/20250403-avatar.jpeg"
-round-avatar: true
+avatar: "/assets/img/20250408-site-avatar.jpg"
+round-avatar: false
 
 exclude:
   - Gemfile

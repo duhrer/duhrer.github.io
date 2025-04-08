@@ -6,6 +6,8 @@ date: '2025-03-06'
 type: posts
 tags:
 - projects
+
+share-img: /assets/img/2025-03-06-positioning-jig.png
 ---
 
 After spending a few weeks learning to make Pebble watch faces, I made one for

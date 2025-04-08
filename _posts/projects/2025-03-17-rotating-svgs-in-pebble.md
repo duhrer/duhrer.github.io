@@ -6,6 +6,8 @@ date: '2025-03-17'
 type: posts
 tags:
 - projects
+
+share-img: /assets/img/2025-03-17-star-plot.jpg
 ---
 
 After working on my [first watch

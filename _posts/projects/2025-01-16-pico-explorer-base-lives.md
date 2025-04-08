@@ -3,6 +3,7 @@ layout: post
 title: Pico Explorer Base and Pico 2 Units
 date: '2025-01-16'
 type: posts
+share-img: /assets/img/2025-01-16-explorer-pico.jpg
 tags:
 - projects
 - microcontrollers

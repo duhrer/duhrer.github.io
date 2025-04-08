@@ -3,6 +3,7 @@ layout: post
 title: Glow Glasses version 1.0
 date: '2024-12-13'
 type: posts
+share-img: /assets/img/assembled-glow-glasses.jpeg
 tags:
 - projects
 - 3d

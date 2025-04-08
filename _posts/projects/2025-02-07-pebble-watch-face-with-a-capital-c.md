@@ -6,6 +6,8 @@ date: '2025-02-07'
 type: posts
 tags:
 - projects
+
+share-img: /assets/img/2025-02-07-vertin-c-screenshot.png
 ---
 
 I wrote a new version of my sample Pebble watch face, this time in C.

@@ -6,6 +6,8 @@ date: '2025-02-28'
 type: posts
 tags:
 - projects
+
+share-img: /assets/img/2025-03-02-colour-picker-corrected.png
 ---
 
 In this (hopefully) last pass at making my own Pebble watchface, I added better

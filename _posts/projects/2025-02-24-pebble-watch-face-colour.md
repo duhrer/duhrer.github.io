@@ -6,6 +6,8 @@ date: '2025-02-24'
 type: posts
 tags:
 - projects
+
+share-img: /assets/img/2025-02-26-watch-without-backlight.jpg
 ---
 
 Strap yourself in, this is a long journey to attempt to achieve a seemingly simple goal.

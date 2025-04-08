@@ -6,6 +6,8 @@ date: '2025-03-07'
 type: posts
 tags:
 - projects
+
+share-img: /assets/img/2025-03-07-mountain-formula-graph.png
 ---
 
 People gave me feedback on my Sisyphus-themed Rebble hackathon entry, and I'm

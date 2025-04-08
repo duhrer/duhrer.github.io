@@ -5,6 +5,8 @@ date: '2025-01-16'
 type: posts
 tags:
 - 3d
+
+share-img: /assets/img/2025-01-17-robot-arm-printer.jpg
 ---
 
 A friend who works on a few projects with the team at the [3D Maker Zone in

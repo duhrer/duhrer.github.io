@@ -6,6 +6,8 @@ date: '2025-03-12'
 type: posts
 tags:
 - projects
+
+share-img: /assets/img/2025-03-08-sky-roll.png
 ---
 
 I'm continuing to refine my Sisyphus-themed Pebble watch face.

@@ -6,6 +6,8 @@ date: '2025-03-14'
 type: posts
 tags:
 - projects
+
+share-img: /assets/img/2025-03-14-diorite-screenshot.png
 ---
 
 After all I learned during the Rebble hackathon, I went back to rewrork [my first Pebble watch face](/https://duhrer.github.io/2025-02-28-pebble-watch-face-configurable-colours/).
