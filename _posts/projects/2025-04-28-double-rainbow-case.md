@@ -17,7 +17,7 @@ lights](https://learn.adafruit.com/adafruit-neopixel-uberguide/the-magic-of-neop
 These are individually addressable LEDs that can display a range of colours. I
 started working with them using [the Solder Party RP2040 Round
 Carrier](https://www.solder.party/docs/rp2040-stamp/round-carrier/), which
-includes a ring of 16 neopixels. Early on, I was looking for option to diffuse
+includes a ring of 16 NeoPixels. Early on, I was looking for option to diffuse
 the light to fill a volume, you can see some examples here:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/OqlaQcNTFeQ?si=32AjFowbzQfB8p9p" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -26,7 +26,7 @@ One of the things I was experimenting with was a frosted glass dome that's part
 of a light fixture I found at a thrift store. I eventually got the idea to make
 it into my own wall-mounted light powered by a RP2040 and NeoPixels.
 
-As I sketched, I started playing with [this cheaper version of a neopixel ring
+As I sketched, I started playing with [this cheaper version of a NeoPixel ring
 Adafruit
 makes](https://www.tinytronics.nl/nl/verlichting/ringen-en-modules/sk6812-digitale-5050-rgb-led-ring-60-leds-zwart),
 which has 60 NeoPixels. I had the idea to use the lights to represent seconds,
@@ -45,8 +45,8 @@ IR remote can trigger.
 ## So Why Isn't It Already Done?
 
 I wrote most of the code last October, and even wired things up inside the light
-fixture with cardboard and hot glue to hold components in place. The project sat
-on the shelf after that because I couldn't think of a good way to mount it.
+fixture using cardboard and hot glue to hold components in place. The project
+sat on the shelf after that because I couldn't think of a good way to mount it.
 
 The sides of the metal base nestle snugly against the glass dome, so there's no
 option to run a cable out the side. I could run a cable out the back of the
