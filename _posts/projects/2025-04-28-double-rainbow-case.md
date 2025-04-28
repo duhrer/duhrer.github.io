@@ -18,7 +18,7 @@ These are individually addressable LEDs that can display a range of colours. I
 started working with them using [the Solder Party RP2040 Round
 Carrier](https://www.solder.party/docs/rp2040-stamp/round-carrier/), which
 includes a ring of 16 neopixels. Early on, I was looking for option to diffuse
-the light to fill a volume, you can see some example here:
+the light to fill a volume, you can see some examples here:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/OqlaQcNTFeQ?si=32AjFowbzQfB8p9p" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
