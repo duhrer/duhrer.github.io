@@ -80,8 +80,8 @@ into. I tried the part I made to confirm that the sizing was correct, and it was
 
 However, the slot didn't turn out to be the best idea for other reasons. As I've
 experienced before, 3 mm bamboo is too deep to make a good panel mount surface,
-and a USB cable plugged in to the extension cable with the panel in between
-wouldn't actually make a connection.
+and a USB cable plugged in to the extension cable with the bamboo panel in
+between wouldn't actually make a connection.
 
 I ended up screwing the aluminium panel that came with the extender to my design
 and using my design as a template to cut and file the aluminium down to fit the
