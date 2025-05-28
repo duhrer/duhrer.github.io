@@ -3,7 +3,7 @@ layout: post
 title: Cutting Bait, Infinity Mirror Edition
 date: '2025-05-28'
 type: posts
-share-img: /assets/img/2025-05
+share-img: /assets/img/2025-05-28-before-installing-mirror-tint.jpg
 tags:
 - cutting bait
 ---
