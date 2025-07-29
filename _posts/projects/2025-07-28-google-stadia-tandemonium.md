@@ -15,15 +15,14 @@ paid off.
 <!--more-->
 
 I bought my first Stadia controller the week Google announced that the Stadia
-service would be discontinued. They were designed to work with the (now defunct)
-Google Stadia service, and without that, you can only really used them as wired
-controllers by default. As a result, they're very cheap.
+service would be discontinued. Without the Google Stadia service, by default the
+controllers can only really used them as wired controllers. Perhaps as a result,
+they tend to be pretty cheap secondhand, especially for the build quality.
 
 The key is that until December 31st 2025, you can run a tool [on the Stadia web
 site](https://stadia.google.com/controller/index_en_US.html) to upgrade the
 firmware and enable Bluetooth support. Once you do that, The Stadia controller
-is compatible with nearly everything, and it's a nice enough controller,
-especially for the money.
+is compatible with nearly everything.
 
 I recently saw a good price on another Google Stadia controller, and knew I had
 to get it. Why?  Well, one of the accessibility features of the Stadia I've long
