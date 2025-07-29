@@ -16,7 +16,7 @@ paid off.
 
 I bought my first Stadia controller the week Google announced that the Stadia
 service would be discontinued. Without the Google Stadia service, by default the
-controllers can only really used them as wired controllers. Perhaps as a result,
+controllers can only really be use as wired controllers. Perhaps as a result,
 they tend to be pretty cheap secondhand, especially for the build quality.
 
 The key is that until December 31st 2025, you can run a tool [on the Stadia web
