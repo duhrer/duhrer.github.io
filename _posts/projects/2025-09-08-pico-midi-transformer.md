@@ -91,7 +91,7 @@ and [the dual-headed examples included with
 TinyUSB](https://github.com/hathach/tinyusb/tree/master/examples/dual).
 
 After shoving my way through a storm of compile-time errors, I finally had my
-key breakthrough. In loking at the Pico PIO USB codebase, I figured out that the
+key breakthrough. Looking at the Pico PIO USB codebase, I figured out that the
 TinyUSB stack included with the Pico SDK was too old to include the MIDI USB
 host code I needed. I was already debating using [`git`
 submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules) to represent my
@@ -103,16 +103,20 @@ libraries, so I added those as submodules and pointed my build at those. The
 compile errors went away, but the client device wouldn't power on.
 
 I looked at OGX Mini code base and figured out how to redefine the USB
-communication and power pins, and suddenly a MIDI controller connected to the
-secondary USB port powered on.  I still haven't got the message routing working
-from that side, but wanted to stop and document my work and commit what I have.
+communication and power pins for the PIO library.  Suddenly, a MIDI controller
+connected to the secondary USB port powered on (I issued a string of happy
+expletives at this point).  However, no messages are coming through from the
+controller.
+
+As excited as I am to plow forward, I decided to take a minute to stop and
+document my work and commit what I have.
 
 ## What's Next?
 
 The next step will be to connect a debugger to the microcontroller and figure
-out what the packet is looking like. Thankfully, the Adafruit feather includes
-the standard debugging connector, so hopefully I'll have everything working
-together soon enough.
+out what's actually happening on the USB host side. Thankfully, the Adafruit
+feather includes a standard debugging connector, so hopefully I'll have
+everything working together soon enough.
 
 In the meantime, I [put up my work to date on
 GitHub](https://github.com/duhrer/pico-midi-transformer), because even "just"
