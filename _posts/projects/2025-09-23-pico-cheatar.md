@@ -24,12 +24,12 @@ decided to try making a little music with my son, I wanted to come up with
 something to make it easier for both of us to play chords without a guitar.
 
 I have an [Oberheim Strummer](https://www.vintagesynth.com/oberheim/strummer),
-which tries to do this. You play a note on a MIDI controller connected to the
-Strummer's input and it outputs notes that simulate strumming a chord. (You can
-see [a demo of the Strummer](https://youtu.be/perScnpn3-M)) on my YouTube
-channel. There are settings for things like the type of chord and strum style,
-and it supports four foot pedals, so you'd pick the modes you like and toggle
-those with the pedals while performing.
+which tries to do this. (You can see [a demo of the
+Strummer](https://youtu.be/perScnpn3-M) on my YouTube channel). You play a note
+on a MIDI controller connected to the Strummer's input and it outputs notes that
+simulate strumming a chord. There are settings for things like the type of chord
+and strum style, and it supports four foot pedals, so you'd pick the modes you
+like and toggle those with the pedals while performing.
 
 After playing with the Strummer, reading the manual, and reading about other
 approaches, I designed one of my first "MIDI routers" designed to play like a
@@ -77,7 +77,7 @@ detailed breakdown](https://youtu.be/OHrn9nKGp8Y?si=goI8OD6VnPoYiLYJ) on my
 YouTube channel.
 
 This approach was really strong for working with guitar
-[tablature](https://en.wikipedia.org/wiki/Tablature)]. The position of your
+[tablature](https://en.wikipedia.org/wiki/Tablature). The position of your
 fingers exactly matched that notation. It was even good for positioning your
 fingers to make a chord, as you could just look at the tablature. However, in
 order to strum, you had to roll your hand across the pads while remembering the
@@ -85,7 +85,7 @@ position. You can mostly manage it, but it's slow.
 
 With one Launchpad you were limited to 9 or 10 frets (depending on the model of
 Launchpad), so eventually I made this [giant guitar fretboard spread acrosssing
-three Launchpads](https://youtu.be/WYZlReSKe9Q?si=8gyUIXu4WoL1fQuk.)
+three Launchpads](https://youtu.be/WYZlReSKe9Q?si=8gyUIXu4WoL1fQuk).
 
 ## Version 3
 
