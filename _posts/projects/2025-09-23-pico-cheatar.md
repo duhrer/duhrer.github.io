@@ -140,21 +140,22 @@ better and build other projects.
 Both the Adafruit and Waveshare units include a NeoPixel, which I'd like to use
 to give more feedback about the status (which key, chord, et cetera).
 
-Unfortunately, the [library I use for NeoPixel work on the
-Pico](https://github.com/martinkooij/pi-pico-adafruit-neopixels) (a C wrapper
-around the Adafruit Python library) is not well maintained, and doesn't work in
-my current build environment. Although I could probably go further down that
-hole and figure out why, the library hasn't been maintained in four years, and
-seems like it's basically holding me back.
+The [library I use for NeoPixel work on the
+Pico](https://github.com/martinkooij/pi-pico-adafruit-neopixels) is a C wrapper
+around an Adafruit Python library. Unfortunately, it's not well maintained and
+doesn't work in my current build environment. Although I could probably go
+further down that hole and figure out why, the library hasn't been updated in
+four years, and seems like it's basically holding me back.
 
 The demo code included on the [Waveshare
 wiki](https://www.waveshare.com/wiki/RP2350-USB-A) just writes its own PIO code
 to manage the light. Under the hood, the Adafruit Neopixel library does the
-same. So, the first thing I need to learn is a bit of
+same. So, it seems like the first thing I need to learn is a bit of
 [PIO](https://www.raspberrypi.com/news/what-is-pio/). 
 
-Although there will likely be a little learning curve, this really seems like
-the way to go in the long term.
+Although there will likely be a little learning curve, I hope it'll make things
+easier in the long term, both in terms of having maintained code to rely on, and
+in terms of building my understanding of PIO for other projects.
 
 ### USB Host Issues
 
