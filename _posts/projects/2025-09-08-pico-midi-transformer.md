@@ -48,7 +48,7 @@ Host](https://www.adafruit.com/product/5723), and tried out the excellent [OGX
 Mini project](https://github.com/wiredopposite/OGX-Mini), I realised I could
 probably do what I wanted with the same family of microcontrollers I've been
 using in my recent work. Instead of a full computer, USB hub, monitor, and
-browser, I cam make little passthrough connectors, and can hopefully even
+browser, I can make little passthrough connectors, and can hopefully even
 "chain" them like guitar effects pedals.
 
 ## Phase 1: USB MIDI Client
