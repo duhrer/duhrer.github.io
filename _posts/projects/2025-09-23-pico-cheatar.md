@@ -26,10 +26,10 @@ something to make it easier for both of us to play chords without a guitar.
 I have an [Oberheim Strummer](https://www.vintagesynth.com/oberheim/strummer),
 which tries to do this. You play a note on a MIDI controller connected to the
 Strummer's input and it outputs notes that simulate strumming a chord. (You can
-see a demo of the Strummer [on my YouTube
-channel](https://youtu.be/perScnpn3-M)). There are settings for things like the
-type of chord and strum style, and it supports four foot pedals, so you'd pick
-the modes you like and toggle those with the pedals while performing.
+see [a demo of the Strummer](https://youtu.be/perScnpn3-M)) on my YouTube
+channel. There are settings for things like the type of chord and strum style,
+and it supports four foot pedals, so you'd pick the modes you like and toggle
+those with the pedals while performing.
 
 After playing with the Strummer, reading the manual, and reading about other
 approaches, I designed one of my first "MIDI routers" designed to play like a
@@ -116,8 +116,7 @@ Unlike version 2, the microcontroller version is much much more stable. You can
 fast strum, slow strum, and strum over and over without any hangups. Suddenly
 it's possible not just to strum a few times, but to strum in patterns (down,
 up+down, up+down, up, for example). Best of all, as the strum is based on how
-you move, it sounds very natural. Here's a quick demo I recorded on my YouTube
-channel:
+you move, it sounds very natural. Here's a quick demo I recorded:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/nZt5VKCov_M?si=RRwQINuW9cQFidZj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
