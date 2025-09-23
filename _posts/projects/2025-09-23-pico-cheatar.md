@@ -126,14 +126,14 @@ and software requirements as well as usage instructions are covered there.
 
 ## What's Next?
 
-Although I'm hugely pleased with the work so far, it does still need work.
+Although I'm hugely pleased with what I have so far, it does still need work.
 Without a screen, it's too hard to tell which chord/key is active, and given
 that repeatedly pressing the same chord changes the way it works, you can often
 end up flailing around between keys and major/minor chord schemes. In short, it
 needs some kind of display, even if it's just a few LED characters or a few
-lights. It also intermittently simply doesn't work until you reset the USB hub (see
-below). So I have a few key things I need to learn to make this project better
-and build other projects.
+lights. It also intermittently simply doesn't work until you reset the USB hub
+(see below). So I have a few key things I need to learn to make this project
+better and build other projects.
 
 ### A Little Light(s) Reading
 
