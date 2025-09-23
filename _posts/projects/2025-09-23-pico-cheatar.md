@@ -84,7 +84,7 @@ order to strum, you had to roll your hand across the pads while remembering the
 position. You can mostly manage it, but it's slow.
 
 With one Launchpad you were limited to 9 or 10 frets (depending on the model of
-Launchpad), so eventually I made this [giant guitar fretboard spread acrosssing
+Launchpad), so eventually I made this [giant guitar fretboard spread across
 three Launchpads](https://youtu.be/WYZlReSKe9Q?si=8gyUIXu4WoL1fQuk).
 
 ## Version 3
