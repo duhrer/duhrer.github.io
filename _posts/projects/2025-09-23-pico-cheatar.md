@@ -44,11 +44,11 @@ bamboo case:
 ![The original "cheatar"](/assets/img/2017-07-12-cheatar-v1-case.jpg)
 
 I wrote the software in [Infusion](https://fluidproject.org/infusion),
-]Flocking](https://github.com/lichen-community-systems/Flocking), and
+[Flocking](https://github.com/lichen-community-systems/Flocking), and
 [WebMIDI](https://developer.mozilla.org/en-US/docs/Web/API/Web_MIDI_API). The
 software ran in a fullscreen browser. The touchscreen was used to configure
-things and to display the current state. You can see a [finger-picking demo on
-my YouTube channel](https://youtu.be/g24gCQSUBa0?si=mGeRZ8tDdyM0Sx5d).
+things and to display the current state. You can see a [finger-picking
+demo](https://youtu.be/g24gCQSUBa0?si=mGeRZ8tDdyM0Sx5d) on my YouTube channel.
 
 I eventually added simulated "strums", and updated the touchscreen to control
 the guitar key and chord. The strum was still "fixed", i.e. pressing a pad
@@ -77,7 +77,7 @@ detailed breakdown](https://youtu.be/OHrn9nKGp8Y?si=goI8OD6VnPoYiLYJ) on my
 YouTube channel.
 
 This approach was really strong for working with guitar
-[tablature[(https://en.wikipedia.org/wiki/Tablature)]. The position of your
+[tablature](https://en.wikipedia.org/wiki/Tablature)]. The position of your
 fingers exactly matched that notation. It was even good for positioning your
 fingers to make a chord, as you could just look at the tablature. However, in
 order to strum, you had to roll your hand across the pads while remembering the
