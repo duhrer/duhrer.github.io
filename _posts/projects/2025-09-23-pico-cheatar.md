@@ -59,14 +59,14 @@ same direction.
 
 After various attempts, I came up with [a second "nano"
 version](https://youtu.be/TYpQYWC0JfE) that made better use of the Korg Nanopad.
-I set up the X/Y pad as a kind of "strum". This was immediately a lot more
-playable. Like a guitar, you play with one hand and pick the key/chords with
-the other, and you can strum in either direction. It felt a lot more natural.
+I set up the X/Y pad as a kind of "strum". Like a guitar, you play with one hand
+and pick the key/chords with the other, and you can strum in either direction.
+This was a lot more playable than the previous version.
 
-I didn't play it as much, in part because it tended to lock up one or two strums
-in. The second and larger reason I didn't work on it for a while is that around
-then I bought my first Novation Launchpad. That first Launchpad and its
-successors became my focus for a few years.
+However, I didn't end up playing it as much.  First, it tended to lock up one or
+two strums in. The second and larger reason I didn't work on it for a while is
+that around then I bought my first Novation Launchpad. That first Launchpad and
+its successors became my focus for a few years.
 
 ## A Side Trip Through The Grid (Controller)
 
