@@ -57,7 +57,7 @@ Step by step, I chipped away at the things that didn't work. The Launchpad
 started waking up and acknowledging that I was connecting to it. I initially
 couldn't send messages to the host port at all, but found the settings I need in
 the
-[`usb_midi_host](https://github.com/rppicomidi/usb_midi_host/tree/main/examples/C-code/usb_midi_host_pio_example)
+[`usb_midi_host`](https://github.com/rppicomidi/usb_midi_host/tree/main/examples/C-code/usb_midi_host_pio_example)
 project. I also found the buffer settings that initially limited me to only
 updating about a third of the Launchpad.
 
