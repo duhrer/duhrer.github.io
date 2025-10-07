@@ -61,7 +61,7 @@ very different schemes depending on the device, and since sysex messages aren't
 sent to a particular channel, I can't use that to distinguish which type of
 device an update is meant for.
 
-When looking for "prior art", I stumbled across [the `midi-multistream2usbdv`
+When looking for "prior art", I stumbled across [the `midi-multistream2usbdev`
 project](https://github.com/rppicomidi/midi-multistream2usbdev), which provided
 a clear example of setting up more than two virtual ports. Their project uses 2
 inputs and 6 outputs, I was able to adapt that work to expose 3 inputs and 3
