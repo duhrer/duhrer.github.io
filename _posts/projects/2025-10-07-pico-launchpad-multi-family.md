@@ -1,9 +1,9 @@
 ---
 layout: post
 title: Pico Launchpad Multi-Family
-date: '2025-10-01'
+date: '2025-10-07'
 type: posts
-share-img: /assets/img/2025-10-01-launchpad-pico-demo.jpeg
+share-img: /assets/img/2025-10-07-four-launchpads.jpeg
 tags:
 - projects
 ---
