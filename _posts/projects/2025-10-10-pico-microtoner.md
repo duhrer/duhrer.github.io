@@ -1,3 +1,4 @@
+---
 layout: post
 title: Pico Microtoner
 date: '2025-10-10'
@@ -44,7 +45,7 @@ Here's the same diagram for 36 EDO:
 
 ![36 EDO](/assets/img/2025-10-10-36-EDO.svg)
 
-Most sound-producing elements can bend 1/2 semitones in each direction, but
+Most sound-producing elements can bend 1 or 2 semitones in each direction, but
 given that each note you output starts at a semitone, all you really need is to
 be able to bend a full semitone to reach all the notes between the "normal"
 semitones.
@@ -125,13 +126,13 @@ supports a huge range of configuration options:
 
 1. How many notes in an octave (EDO), anywhere from 1 to 8192.
 2. How many semitones your pitchbend covers (generally 1 or 2).
-3. What note should be treated as the "center" of your controller (it's set to
-   middle C by default).
-4. Whether you're using the monotimbral or multitimbral approach. 
+3. What note is the "center" of your iput (middle C by default).
+4. What note is the "center" of the output (also middle C by default).
+5. Whether you're using the monotimbral or multitimbral approach. 
 
-Although I have all of these things represented in a "state", right now, you
-have to edit the initial state and recompile to change the configuration. I have
-a few thoughts about making this configurable in real time.
+Although I have all of these things represented in a "state" structure, right
+now you have to edit the defaults and recompile to change the configuration. I
+have a few thoughts about making this configurable in real time.
 
 I could probably make everything configurable using MIDI control change messages
 or System Exclusive Messages. I'm tempted to do this as it would mean a wide
