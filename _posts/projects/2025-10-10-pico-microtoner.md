@@ -3,7 +3,7 @@ layout: post
 title: Pico Microtoner
 date: '2025-10-10'
 type: posts
-share-img: /assets/img/2025-10-10-36-EDO.svg
+share-img: /assets/img/2025-10-10-36-EDO.png
 tags:
 - projects
 ---

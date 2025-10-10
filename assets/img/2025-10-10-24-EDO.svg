@@ -8,7 +8,7 @@
    version="1.1"
    id="svg1"
    inkscape:version="1.4.2 (ebf0e940d0, 2025-05-08)"
-   sodipodi:docname="24 EDO.svg"
+   sodipodi:docname="2025-10-10-24-EDO.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -24,14 +24,14 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
      showguides="false"
-     inkscape:zoom="0.51491302"
-     inkscape:cx="166.04746"
-     inkscape:cy="411.72002"
-     inkscape:window-width="3440"
-     inkscape:window-height="1374"
-     inkscape:window-x="0"
-     inkscape:window-y="0"
-     inkscape:window-maximized="1"
+     inkscape:zoom="0.47984158"
+     inkscape:cx="681.47492"
+     inkscape:cy="237.57841"
+     inkscape:window-width="1704"
+     inkscape:window-height="1358"
+     inkscape:window-x="26"
+     inkscape:window-y="23"
+     inkscape:window-maximized="0"
      inkscape:current-layer="layer1" />
   <defs
      id="defs1" />
@@ -42,7 +42,7 @@
      transform="translate(114.38763,-82.964735)">
     <g
        id="g114"
-       transform="translate(0,-38.16232)">
+       transform="translate(1.6552276e-5,41.837672)">
       <text
          xml:space="preserve"
          style="font-weight:bold;font-size:24px;line-height:0.6;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans Bold';text-align:center;writing-mode:lr-tb;direction:ltr;text-anchor:middle;fill:#c6c6c6;stroke-width:3.77953;stroke-linecap:round;stroke-linejoin:round"
@@ -401,5 +401,16 @@
            y="250.9543"
            style="font-size:48px;fill:#1025d7;fill-opacity:1">Channel 1 (quartertone bend)</tspan></text>
     </g>
+    <text
+       xml:space="preserve"
+       style="font-weight:bold;font-size:72px;line-height:0.6;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans Bold';text-align:center;writing-mode:lr-tb;direction:ltr;text-anchor:middle;fill:#d71010;stroke:#d71010;stroke-width:3.77953;stroke-linecap:round;stroke-linejoin:round"
+       x="41.036987"
+       y="157.46849"
+       id="text10"><tspan
+         sodipodi:role="line"
+         id="tspan10"
+         x="41.036987"
+         y="157.46849"
+         style="font-size:72px;fill:#000000;fill-opacity:1;stroke:none">EDO 24</tspan></text>
   </g>
 </svg>
