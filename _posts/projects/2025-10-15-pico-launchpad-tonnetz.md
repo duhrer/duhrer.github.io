@@ -29,10 +29,12 @@ by 45 degrees,  This "diamond" layout is a little unwieldy on a rectangular
 desk, so I also came up with the idea of "skewing" the diagram a bit to align it
 with a grid controller.
 
-I translated the diagram into MIDI notes, and remapped the controller pad by
-pad using a lookup table. It worked well enough, especially for a sketch.
+I translated the diagram into MIDI notes, and remapped the controller pad by pad
+using a lookup table. It worked well enough, especially for a sketch:
 
-## Four Years Later
+<iframe width="560" height="315" src="https://www.youtube.com/embed/T1XDlb1hsXg?si=e9zprahJmXbnKets" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+## Five Years Later
 
 After reviving other similar Launchpad projects, I was looking for another that
 was both easy with the tools I have, and fun to reconsider. I settled on the
