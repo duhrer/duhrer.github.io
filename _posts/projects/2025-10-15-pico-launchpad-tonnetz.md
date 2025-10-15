@@ -3,7 +3,7 @@ layout: post
 title: Pico Launchpad Tonnetz
 date: '2025-10-15'
 type: posts
-share-img: /assets/img/2025-10-10-36-EDO.png
+share-img: /assets/img/2025-10-14-tonnetz-octave.svg
 tags:
 - projects
 ---
