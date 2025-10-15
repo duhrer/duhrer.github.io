@@ -96,8 +96,8 @@ already line up with each other.*
 
 ## A Side Note About Process
 
-Although I did read some old code and start working on the skeleton for this
-project, my basic process starts with documentation and diagrams.  Documentation
+Although I did start by reading old code and working on the skeleton for this
+project, most of my early process is documentation and diagrams.  Documentation
 includes this blog, which I started writing before I wrote most of the code. It
 also includes the basic user documentation in the repository's markdown files.
 
