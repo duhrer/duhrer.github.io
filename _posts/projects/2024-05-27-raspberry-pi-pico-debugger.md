@@ -60,7 +60,7 @@ function go2040() {
 
 With that, I'm able to install a new binary using a command like:
 
-`go2044 binary.elf`
+`go2040 binary.elf`
 
  My next steps are:
  
