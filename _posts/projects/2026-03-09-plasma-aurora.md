@@ -81,7 +81,7 @@ simulation](/assets/img/2026-03-09-three-body-simulation.svg)
 
 Each colour channel (red, green, blue) orbits around its own centre of gravity,
 and their orbits are arranged to periodically overlap. Unlike in the diagram, in
-the real unit, the orbiting "spotlights" will be big enough to fill most of the
+the real unit, each spotlight will be big enough to fill most of the
 grid/square. The colours mix wherever the spotlights overlap. Since the
 spotlights orbit at different speeds, there should be a nice variety of colours
 and patterns.
