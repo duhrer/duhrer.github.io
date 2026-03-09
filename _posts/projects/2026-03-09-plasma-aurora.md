@@ -55,11 +55,11 @@ just needed to design and write the real software.
 
 I'm usually happy to lean into the "gridness" of things like the Novation
 Launchpad ([see previous
-work](https://github.com/duhrer/pico-launchpad/tree/main)), for many projects,
+work](https://github.com/duhrer/pico-launchpad/tree/main)).  For many projects,
 like my work with guitar fretboards, it's a good fit. Sometimes, though, for the
 sake of variety I'll make something like the [Polar
-Vortex](/demos/flocking-midi-interchange/demos/polar-vortex.html) that works
-a bit differently.
+Vortex](/demos/flocking-midi-interchange/demos/polar-vortex.html) that works a
+bit differently.
 
 In the Polar Vortex, there are multiple points orbiting around a single centre
 of gravity. Their position is tracked using polar coordinates, i.e. the distance
