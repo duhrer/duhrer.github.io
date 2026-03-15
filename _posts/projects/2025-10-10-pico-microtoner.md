@@ -6,6 +6,7 @@ type: posts
 share-img: /assets/img/2025-10-10-36-EDO.png
 tags:
 - projects
+- MIDI
 ---
 
 I was looking through some older demos while working on my last project, and

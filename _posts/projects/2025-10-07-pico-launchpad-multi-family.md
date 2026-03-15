@@ -6,6 +6,7 @@ type: posts
 share-img: /assets/img/2025-10-07-four-launchpads.jpeg
 tags:
 - projects
+- MIDI
 ---
 
 I updated my work on the Pico Launchpad to support a wider range of devices.

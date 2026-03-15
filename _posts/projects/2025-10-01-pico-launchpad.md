@@ -6,6 +6,7 @@ type: posts
 share-img: /assets/img/2025-10-01-launchpad-pico-demo.jpeg
 tags:
 - projects
+- MIDI
 ---
 
 After working on other projects using dual-USB microcontrollers, I'm back

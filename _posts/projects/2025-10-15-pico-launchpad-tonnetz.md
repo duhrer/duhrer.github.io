@@ -6,6 +6,7 @@ type: posts
 share-img: /assets/img/2025-10-14-tonnetz-octave.png
 tags:
 - projects
+- MIDI
 ---
 
 I revived yet another Launchpad project, this time to make an isomorphic "Tonnetz" controller.
