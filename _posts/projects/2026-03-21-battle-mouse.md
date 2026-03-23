@@ -21,12 +21,6 @@ actually use the joystick yet, I did read up on what it was supposed to do.
 There weren't joysticks for the Macintosh when the Gravis unit came out, so it
 had a driver to make it act like a mouse.
 
-I've wanted to make something like this for a while to enhance the work I've
-done with the [Gamepad
-Navigator](https://github.com/fluid-lab/gamepad-navigator). Instead of
-simulating a mouse using browser APIs, I could actually move the pointer and
-click things like a regular mouse.
-
 This got me thinking: why not do that with a modern USB joystick or gamepad?
 There are plenty of applications you can install on a computer to do this. There
 are also gamepads like the original Steam Controller that do this, but only when
@@ -92,23 +86,24 @@ right tool for the job.
 
 ### Micropython
 
-I started working with the built-in Micropython installation, and figured out
-enough to install packages and run test code in the
+I started working with the built-in Micropython, and figured out basics like
+installing packages, running code, and using the
 [REPL](https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop). This
-was helpful in understanding some of the basics (like using the display), but their
-TinyUSB stack doesn't even seem to have wrappers for the host code I need.
+was helpful in understanding some of the basics (like using the display), but
+their TinyUSB stack doesn't even have wrappers the USB host code I need (yet),
+so I kept looking around.
 
 ### Circuit Python
 
 Some of the examples I'd seen were written for [Circuit
 Python](https://circuitpython.org/), which has a USB stack that includes host
-support, and has definitions and examples for dual-USB boards like the ones I
+support. It also has definitions and examples for dual-USB boards like the ones I
 tend to use. They even had a [binary for the Pimoroni
 Explorer](https://circuitpython.org/board/pimoroni_explorer2350/_), which I
 installed.
 
 Immediately, I liked it a lot better. Instead of a colourful and somewhat
-childish menu system, the screen is a console.  Log messages issued in your code
+childish menu system, the screen is a console. Log messages printed in your code
 display on the screen. The console also displays commands and results triggered
 using the remote REPL tool.
 
@@ -126,7 +121,7 @@ seeing error messages. Not bad.
 
 ### The First Working Mouse Example
 
-So, within a few minutes, I had my mouse example working.It runs the pointer in
+So, within a few minutes, I had my mouse example working. It runs the pointer in
 a circle using `sin` and `cos` functions, which doesn't sound exciting unless
 you've been trying to make it work for a while.
 
@@ -147,63 +142,65 @@ The gamepad had power immediately, which was a good sign.
 I drilled down into the [board definition for the Adafruit Feather RP2040 with
 USB
 Host](https://github.com/adafruit/circuitpython/blob/0dbd5e0974a4bae050248251f532b63f361e5177/ports/raspberrypi/boards/adafruit_feather_rp2040_usb_host/board.c#L32),
-and from that, I figured out how to manually activate the host port, which
-thankfully doesn't have to be run at a particular time in the board's lifecycle,
-so you don't need to manage a "boot" routine in another file.
+and from that, I figured out how to manually activate the host port. Thankfully,
+this is something you can do in real time, you don't need to manage any code
+that's part of the device's "boot" process.
 
-I started out using [this
+I initially used [this
 module](https://github.com/relic-se/CircuitPython_USB_Host_Gamepad/tree/main),
-but it was written for particular gamepads. I could use it with a Playstation 4
-controller, but what I really want to learn is how to work with a controller
-of my choosing.
+but it was written for particular gamepads. I was able to use it with a
+Playstation 4 controller, but it didn't work with a lot of the gamepads I have
 
-So, I looked at more examples until I was able to come up with a basic approach
-using the core USB modules and some Adafruit helper modules. I used these
-to make a quick tool to print what was being read from the gamepad. I could see
-which bytes were updated when I changed things, and used that to come up with a
-strategy to parse the gamepad's state.
+What I really want to learn is how to work with a controller of my choosing, so
+I looked at more examples until I was able to come up with a basic approach
+using the core USB modules and some Adafruit helper modules.
+
+I used these to make a quick tool to print what was being read from the gamepad.
+I could see which bytes were updated when I changed things, and used that to
+come up with a strategy to parse the gamepad's state.
 
 ### The Battle Mouse
 
 With that, I was finally able to create the Circuit Python version of the Battle
-Mouse.  Here's the obligatory demo:
+Mouse. Here's a demo:
 
 
-<iframe width="500" src="https://www.youtube.com/embed/M5QjmA9hbxE?si=bnYT_mdHBWqDziw5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
+<iframe width="500" height="280" src="https://www.youtube.com/embed/M5QjmA9hbxE?si=bnYT_mdHBWqDziw5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ### Off Piste Learning Adventures
 
 So, with the gamepad, the whole setup is borderline usable, but of course I
 wanted to take it further. I specifically wanted to use it with the Xbox
-Adaptive Controller, which supports using standalone joysticks for thumbstick
-input.
+Adaptive Controller, which supports using standalone joysticks to generate
+thumbstick input. With seemingly very little effort, I could control my
+tank-like mouse with tank-sized joysticks.
 
-The first bit of learning here is that the Xbox Adaptive Controller (and
-apparently Xbox One controllers in general) don't act like a normal USB HID
-Gamepad. There are workarounds [like this
+The first thing I learned is that the Xbox Adaptive Controller (and apparently
+any Xbox One controller) doesn't act like a normal USB HID Gamepad. There
+are workarounds [like this
 one](https://github.com/adafruit/circuitpython/issues/1696), but thankfully I
-don't need to go that far just to try it.  The excellent [OGX
-Mini](https://github.com/wiredopposite/OGX-Mini/) lets you make any controller
-(including the Xbox Adaptive Controller) pretend to be another controller.
+don't need to go that far just to try it.
+
+The excellent [OGX Mini Project](https://github.com/wiredopposite/OGX-Mini) lets
+you program a dual-USB microcontroller to allow any gamepad (including the Xbox
+Adaptive Controller) to pretend to be another device.
 
 Long term, I can learn from their approach to supporting Xbox controllers. Short
-term, I can just use OGX Mini to make the XAC pretend to be something I can work
-with.
+term, use OGX Mini to make the XAC pretend to be something I can work with more
+easily.
 
-As part of this I learned that I can "chain" the OGX Mini, i.e. connect it to
-the host port of my setup, and connect another controller to the OGX Mini. So, I
-hooked up the XAC and big honking joysticks via the OGX Min, and updated my code
-to work with it.
-
-It was not usable enough to make for a good demo, mostly because one of the
-sticks is really muddy, it can't reach the full range of values and "jitters"
-off centre when not in use. I have so many joysticks at this point that I
-probably need to raise my standards a bit and offer this one to the thrift
-store.
+So, I hooked up the XAC and big honking joysticks via the OGX Min, and updated
+my code to work with it. It was not usable enough to make for a good demo,
+mostly because one of the joysticks is really muddy, i.e. it can't reach the
+full range of values and "jitters" off centre when not in use. I have so many
+joysticks at this point that I probably need to raise my standards a bit and
+offer this one to the thrift store.
 
 But, I did at least come up with an approach to using the XAC in Circuit Python
-projects.
+projects. I also learned that I can "chain" the OGX Mini, i.e. connect it to
+the host port of my setup, and connect another controller to the OGX Mini. This
+is something I haven't managed yet with my own dual-USB projects, and is yet
+another area where OGX Mini sets the standard to learn from.
 
 ## What's Next
 
@@ -211,8 +208,11 @@ Now that I know I can get the mouse working in Circuit Python, I plan to closely
 compare the USB descriptors and their use of TinyUSB to what I've done in C.
 Hopefully I'll figure out a way to get the C version working.
 
-Once I get that done, I may make a slightly more serious gamepad to mouse
-adapter. I may also work on learning enough of the Web USB API to configure and
-send commands to a microcontroller.
+Once I get that done, I may make a slightly more serious gamepad to
+mouse/keyboard adapter that supports configuration options. The OGX Mini has set
+the standard here as well, it has a mode where you can reprogram its behaviour
+with a web browser. With that and some way to persist settings, I could replace
+most of what I've done with the Gamepad Navigator with a platform-independent
+device that works across all applications.
 
-Stay tuned for whatever's next.
+Anyway, that's it for now. Stay tuned for whatever's next.
