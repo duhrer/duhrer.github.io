@@ -33,7 +33,7 @@ with both the device and host stack. It seemed like a good time to give it a go.
 
 So I thought up a project. The thing is, gamepads have two sticks. I was
 thinking about the old game
-[Battlezone](https://en.wikipedia.org/wiki/Battlezone_(1980_video_game), which
+[Battlezone](https://en.wikipedia.org/wiki/Battlezone_(1980_video_game)), which
 uses two sticks to control a tank. Why not combine the two ideas and make a
 "battle mouse", where:
 
